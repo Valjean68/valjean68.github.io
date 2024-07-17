@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+	:root{
+		--thetaarriba: 0deg;
+		--thetacero: 0deg;
+		--thetanoventa: 90deg;
+		--transcero: 0px;
+		--transcerolento: 0px;
+		--transamaga: 0px;
+		--thetaneg: 0deg;
+		--transmas: 0px;
+
+
+		--segundouno: 0px;
+		--segundodos: 0px;
+		--segundotres: 0px;
+		--segundocuatro: 0px;
+		--segundocuatrovid: 0px;
+		--segundocinco: 0px;
+		--segundoseis: 0px;
+		--segundoseisimg: 0px;
+
+		--achica: 0vw;
+
+		--bg: #001923;
+
+		--lasbolas: 0;
+
+	}
+	*{margin: 0;
+		padding: 0;
+	}
+	html{
+		scroll-behavior: smooth;
+		
+	}
+	body{position: relative;
+		overflow-x: hidden;
+		font-family: sans-serif;
+
+	}
+
+::-webkit-scrollbar{
+	display: none;
+}
+
+		.progressbar{
+			position: fixed;
+			top: 4px;
+			right: 4px;
+			width: 5px;
+			height: 0;
+			background: linear-gradient(to top,#008aff,#00ffe7);
+			z-index: 8;
+			border-radius: 5px;
+		}
+		
+
+
+
+
+
+		.elbody{contain: paint;
+			height: 500vh;
+			
+			width: 100vw;
+			position: relative;
+		}
+
+	
+
+		.uyuyuy{
+			
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			
+			width: 100vw;
+			  position: sticky;
+			  top: 0;
+
+
+		}
+
+		.fondoui{
+			min-height: 150vh;
+			background: linear-gradient(to right, #dbe6f6, #c5796d);
+			width: 200vw;
+			position: absolute;
+			animation: translate 5s linear infinite;
+		}
+
+		@keyframes translate{
+			0%{
+				transform: translateX(0vw);
+			}
+			50%{
+				transform: translateX(-50vw);
+			}
+			100%{
+				transform: translateX(0vw);
+			}
+		}
+
+
+
+
+		.boxi{
+			transform:  perspective(100vw);
+			position: absolute;
+			width: 7vw;
+			height: 7vw;
+			transform-style: preserve-3d;
+			animation: animatebox 120s linear infinite;
+			
+		}
+		@keyframes animatebox{
+			0%{
+				
+				transform: rotateX(var(--thetacero)) rotateY(var(--thetacero));
+			}
+			80%{
+					
+				transform: rotateX(460deg) rotateY(360deg);	
+			}
+			100%{
+				transform: rotateX(var(--thetacero)) rotateY(var(--thetacero));
+			}
+		}
+		.boxi span{
+			
+			border-radius: 10px;
+			background: orange;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transform-origin: center;
+			transform-style: preserve-3d;
+			
+			transform: rotateX(calc(var(--i) * 10deg)) translateZ(20vw);
+			animation: hue 60s linear infinite;
+		}
+
+
+
+
+		.boxii{
+			transform:  perspective(100vw);
+			position: absolute;
+			width: 7vw;
+			height: 7vw;
+			transform-style: preserve-3d;
+			animation: animatebox2 120s linear infinite;
+
+			
+		}
+		@keyframes animatebox2{
+			0%{
+				
+				transform: rotateX(var(--thetacero)) rotateY(var(--thetacero));
+			}
+			80%{
+					
+				transform: rotateX(360deg) rotateY(360deg);	
+			}
+			100%{
+				transform: rotateX(var(--thetacero)) rotateY(var(--thetacero));
+			}
+		}
+		.boxii span{filter: blur(50px);
+			border-radius: 10px;
+			background: orange;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transform-origin: center;
+			transform-style: preserve-3d;
+			
+			transform: rotateY(calc(var(--i) * 10deg)) translateZ(20vw);
+			animation: hue 40s linear infinite;
+			
+		}
+	
+	
+
+
+
+
+	.boxiii{
+		transform:  perspective(100vw);
+			position: absolute;
+			width: 7vw;
+			height: 7vw;
+			transform-style: preserve-3d;
+			animation: animatebox3 120s linear infinite;
+
+			
+		}
+		@keyframes animatebox3{
+			0%{
+				
+				transform: rotateX(var(--thetanoventa)) rotateY(var(--thetanoventa));
+			}
+			80%{
+					
+				transform: rotateX(450deg) rotateY(450deg);	
+			}
+			100%{
+				transform: rotateX(var(--thetanoventa)) rotateY(var(--thetanoventa));
+			}
+		}
+		.boxiii span{filter: blur(50px);
+			border-radius: 10px;
+			background: orange;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transform-origin: center;
+			transform-style: preserve-3d;
+			
+			transform: rotateY(calc(var(--i) * 10deg)) translateZ(20vw);
+			animation: hue 50s linear infinite;
+		}
+
+		@keyframes hue{
+	0%,100%{
+		filter: hue-rotate(0deg) sepia(50%);
+	}
+	50%{
+		filter: hue-rotate(360deg) sepia(80%);
+	}
+}
+	
+
+
+		.snow,.snow:after,.snow:before{
+			z-index: 1;
+			content: "";
+			position: absolute;
+			top: -650px;
+			left: -450px;
+			right: 0;
+			bottom: 0;
+			background-image: 
+			radial-gradient(4px 4px at 100px 50px,wheat,transparent),
+			radial-gradient(6px 6px at 200px 150px,wheat,transparent),
+			radial-gradient(3px 3px at 300px 250px,wheat,transparent),
+			radial-gradient(4px 4px at 400px 350px,wheat,transparent),
+			radial-gradient(6px 6px at 500px 100px,wheat,transparent),
+			radial-gradient(3px 3px at 50px 200px,wheat,transparent),
+			radial-gradient(4px 4px at 150px 300px,wheat,transparent),
+			radial-gradient(6px 6px at 250px 400px,wheat,transparent),
+			radial-gradient(6px 6px at 350px 500px,wheat,transparent);
+			background-size: 650px 650px;
+			animation: snowanim 30s linear infinite;
+
+		}
+
+		.snow:after{
+
+			margin-left: -250px;
+			opacity: 0.5;
+			filter: blur(2px);
+			animation-direction: reverse;
+			animation-duration: 13s;
+		}
+
+
+		.snow:before{
+			margin-left: -350px;
+			opacity: 0.7;
+			filter: blur(1px);
+		}
+
+		@keyframes snowanim{
+			from{
+				transform: translateY(0) translateX(0);opacity: 0.5;
+
+			}
+			to{
+				transform: translateY(450px) translateX(250px);opacity: 0.8;
+			}
+		}
+
+	.scale{
+		animation: bonjour 20s linear forwards;
+		
+	}
+
+	@keyframes bonjour{
+		0%{
+			transform: translateX(-50px) translateY(-150px)  rotate(var(--thetaarriba)) scale(0.4);
+		}20%{
+			transform: translateX(var(--transcerolento)) translateY(var(--transcero)) scale(0.7);
+		}
+		100%{
+			transform: translateX(var(--transcerolento)) translateY(var(--transcero))  rotate(var(--thetaarriba)) scale(0.7);			
+		}
+	}
+
+
+	.segundo{
+		position: relative;
+		height: 500vh;
+	}
+
+
+	.segundoinner{
+		position: sticky;
+		top: 0;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		background: brown;
+		height: 100vh;
+		width: 100vw;
+		color: beige;
+	}
+
+
+	.footer{
+		position: sticky;
+		height: 100vh;
+		top: 0;
+		
+	}
+
+
+	.elfooter{
+		
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		background: steelblue;
+		height: 100vh;
+		width: 100vw;
+		color: beige;
+	}
+
+	.dentrodeelbody{
+		display: flex;
+			justify-content: center;
+			align-items: center;
+		
+		height: 100vh;
+		width: 100vw;
+		position: absolute;
+		z-index: 2;
+		
+		
+
+	}
+
+	
+
+
+
+
+
+		.galeria{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			transform:  perspective(100vw);
+			position: absolute;
+			width: 15vw;
+			height: 10vw;
+			transform-style: preserve-3d;
+			animation: galeria 300s linear infinite;
+			
+			
+		}
+		
+		@keyframes galeria{
+			0%{
+				
+				transform: perspective(70vw) rotateY(var(--thetaneg)) translateY(var(--transmas));
+			}
+			100%{
+					
+				transform: perspective(70vw) rotateY(calc(var(--thetaneg) + 360deg)) translateY(var(--transmas));	
+			}
+			
+		}
+		.galeria span.elespan{
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			border-radius: 10px;
+			
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transform-origin: center;
+			transform-style: preserve-3d;
+			
+			transform: translateY(calc(var(--b) * 40vh)) rotateY(calc(var(--b) * 72deg)) translateZ(20vw);
+			transition: height 0.2s ease, width 0.5s ease 0.2s;
+			backface-visibility: hidden;
+			
+		}
+
+		.galeria span.elespen{overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			border-radius: 10px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transform-origin: center;
+			transform-style: preserve-3d;
+			background: black;
+			
+			transform: translateY(calc(var(--b) * 40vh)) rotateY(calc(var(--b) * 72deg)) translateZ(20vw) rotateY(180deg);
+			backface-visibility: hidden;
+			pointer-events: none;
+
+		}
+
+		.galeria span.elespan:hover{
+			width: 30vw;
+			height: 30vh;
+		}
+		.textito{
+			display: none;
+		}
+
+		.textsidisp{position: absolute;
+			bottom: 0;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+			width: 100%;
+			height: 10vh;
+			color: whitesmoke;
+			font-size: 1vw;
+
+		}
+
+.segundoinneruno{border-radius: 15px;
+	top: 70vh;
+transform: translateY(var(--segundouno));
+}
+
+.segundoinnerdos{top: 140vh;border-radius: 15px;
+transform: translateY(var(--segundodos));
+}
+.segundoinnertres{top: 100vh;border-radius: 15px;
+transform: translateY(var(--segundotres));
+}
+.segundoinnercuatro{top:150vh;border-radius: 15px;
+transform: translateY(var(--segundocuatro));
+}
+.segundoinnercuatrovid{top:170vh;border-radius: 15px;
+transform: translateY(var(--segundocuatrovid));
+}
+.segundoinnercinco{top: 210vh;border-radius: 15px;
+transform: translateY(var(--segundocinco));
+}
+.segundoinnerseis{top: 250vh;border-radius: 15px;
+transform: translateY(var(--segundoseis));
+}
+.segundoinnerseisimg{top: 280vh;border-radius: 15px;
+transform: translateY(var(--segundoseisimg));
+}
+
+.navbar a{
+text-decoration: none;
+color: wheat;
+font-size: 16px;
+padding: 10px 4px;
+margin: 10px 8px;
+letter-spacing: 2px;
+transition: 0.5s;
+}
+
+
+.navbar a:hover{
+
+	color: beige;
+}
+
+
+
+
+.myImg {
+	
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 15; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: scroll; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+.frasehue{
+	animation: hue 160s linear infinite;
+	
+	max-width: 10vw;
+}
+@keyframes hue{
+	from{
+		filter: hue-rotate(0);
+
+	}
+	to{filter: hue-rotate(360deg);
+
+	}
+}
+
+
+
+		.marco::before{
+			content: '';
+			position: absolute;
+			top: 1vh;
+			left: 3vw;
+			width: 40vh;
+			height: 40vh;
+			background: linear-gradient(#ffeb3b,#e91e63);
+			border-radius: 50%;
+			
+		}
+
+		.marco::after{
+			content: '';
+			position: absolute;
+			bottom: 2vh;
+			right: 5vw;
+			width: 35vh;
+			height: 35vh;
+			background: linear-gradient(#2196f3,#83d8ff);
+			border-radius: 50%;
+			
+		}
+
+		.glass{
+			position: absolute;width: 70vw;height: 80vh;top: 10vh;left: 15vw;
+			background: rgba(255, 255, 255, 0.1);
+			box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+			border: 1px solid rgba(255,255,255,0.25);
+			border-right: 1px solid rgba(255,255,255,0.25);
+			border-bottom: 1px solid rgba(255,255,255,0.25);
+			border-bottom: 10px;
+			backdrop-filter: blur(25px);
+			z-index: 2;
+			overflow: hidden;
+		}
+
+		.glass::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -40%;
+			width: 100%;
+			height: 100%;
+			background: rgba(255, 255, 255, 0.05);
+			pointer-events: none;
+			transform: skewX(-15deg);
+		}
+		.glass h2{
+			height: 10vh;
+		
+			width: 100%;
+			text-align: center;
+			color: whitesmoke;
+			font-size: 36px;
+		}
+		.formulario{
+			position: absolute;
+			top: 10vh;
+			left: 5vw;
+			
+			height: 60vh;
+			width: 60vw;
+		}
+
+
+
+		.labels{
+			position: absolute;
+			
+			left: 0;
+			
+			height: 5vh;
+			width: 60vw;
+			background: transparent;
+			box-shadow: none;
+			border: none;
+			outline: none;
+			font-size: 16px;
+			padding: 5px 0;
+			z-index: 1;
+			color: whitesmoke;
+		}
+
+
+
+		.marco::before{
+			content: '';
+			position: absolute;
+			top: calc(1vh + var(--lasbolas));
+			left: 3vw;
+			width: 40vh;
+			height: 40vh;
+			background: linear-gradient(#ffeb3b,#e91e63);
+			border-radius: 50%;
+			
+		}
+
+		.marco::after{
+			content: '';
+			position: absolute;
+			bottom: calc(2vh + var(--lasbolas));
+			right: 3vw;
+			width: 35vh;
+			height: 35vh;
+			background: linear-gradient(#2196f3,#83d8ff);
+			border-radius: 50%;
+			
+		}
+
+		.glass{
+			position: absolute;width: 70vw;height: 80vh;top: 10vh;left: 15vw;
+			background: rgba(255, 255, 255, 0.1);
+			box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+			border: 1px solid rgba(255,255,255,0.25);
+			border-right: 1px solid rgba(255,255,255,0.25);
+			border-bottom: 1px solid rgba(255,255,255,0.25);
+			border-bottom: 10px;
+			backdrop-filter: blur(25px);
+			z-index: 2;
+			overflow: hidden;
+		}
+
+		.glass::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -40%;
+			width: 100%;
+			height: 100%;
+			background: rgba(255, 255, 255, 0.05);
+			pointer-events: none;
+			transform: skewX(-15deg);
+		}
+		.glass h2{
+			letter-spacing: 5px;
+			height: 10vh;
+			padding-top: 5%;
+		
+			width: 100%;
+			text-align: center;
+			color: whitesmoke;
+			font-size: 36px;
+		}
+		.formulario{
+			position: absolute;
+			top: 10vh;
+			left: 5vw;
+			
+			height: 65vh;
+			width: 60vw;
+		}
+
+		.datos{
+			position: absolute;
+			
+			left: 0;
+			
+			height: 5vh;
+			width: 60vw;
+			
+			box-shadow: none;
+			border: none;
+			outline: none;
+			font-size: 15px;
+			
+			z-index: 1;
+			color: whitesmoke;
+			border-bottom: 3px solid whitesmoke;
+			box-sizing: border-box;
+			transition: 0.5s;
+
+			background: linear-gradient(transparent,transparent,transparent,transparent,rgba(255,255,255,0.1));
+		    background-size: auto 210%;
+		    background-position: 0 0;
+		    transition: background-position 0.5s;
+		   
+		}
+
+
+		.datos:hover{
+			 background-position: 0 100%;
+		}
+
+		.datos:focus{
+			 background-position: 0 100%;
+		}
+
+		.datos::placeholder{
+			color: rgba(184, 184, 184, 0.7);
+
+		}
+
+		.labels{
+			position: absolute;
+			
+			left: 0;
+			
+			height: 5vh;
+			width: 60vw;
+			background: transparent;
+			box-shadow: none;
+			border: none;
+			outline: none;
+			font-size: 16px;
+			
+			z-index: 1;
+			color: #83d8ff;
+			font-weight: normal;
+		}
+
+		.datos[type='submit']{
+			border: 2px solid whitesmoke;
+			
+			cursor: pointer;
+			outline: none;
+			background: rgba(255,255,255,0.1);
+			color: whitesmoke;
+			font-weight: 600;
+			font-size: 18px;
+			border-radius: 2px;
+			transition: 0.5s;
+		}
+		.datos[type='submit']:hover{
+			background: rgba(255,255,255,0.8);
+			color: grey;
+		}
+
+		ul{position: relative;
+			display: flex;
+			margin: 3vw;
+			
+
+		}
+		ul li{
+			position: relative;
+			list-style: none;
+			width: 12vw;
+			height: 12vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			transition: 0.5s;
+		}
+
+		ul li:hover{
+			z-index: 100;
+			transform: scale(0.75);
+		}
+		ul li::before{
+			content: '';
+			position: absolute;
+			inset: 3vw;
+			box-shadow: 0 0 0 10px var(--clr),0 0 0 20px var(--bg),0 0 0 22px var(--clr);
+			transition: 0.5s;
+		}
+		ul li:hover::before{
+			inset: 0;
+		}
+		ul li::after{
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: var(--bg);
+			transform: rotate(45deg);
+		}
+		ul li a{
+			position: relative;
+			text-decoration: none;
+			color: var(--clr);
+			z-index: 10;
+			font-size: 2em;
+			transition: 0.5s;
+
+		}
+		ul li:hover a{
+			font-size: 3em;
+			filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
+		}
+
+		.footerista{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 25vw;
+			background: var(--bg);
+		}
+	</style>
+	<meta charset="utf-8">
+	<title>Galeria</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<nav class="navbar" style="position: fixed;height: 5vh;width: 100vw;z-index: 15;">
+		 <a class="active" href="#home" style="float: left;">Bananizate</a>
+					  
+					  <a href="#contacto" style="float:right;">Contacto</a>
+					  <a href="#contacto" style="float:right;">Técnica</a>
+					  <a href="#contacto" style="float:right;">Filosofía</a>
+					  
+					 
+		
+	</nav>
+	
+	<div class="progressbar"></div>
+	
+	<div class="elbody">
+
+	<div class="uyuyuy">
+		
+		<div class="dentrodeelbody">
+			<h2 style="z-index: 4;color: wheat;top: 10vh;position: absolute;justify-content: center;font-weight: 100;letter-spacing: 12px;font-size: 24px;">BananaBang</h2>
+			
+			<div class="galeria">
+				<h1 class="frasehue" style="z-index: 4;color: orangered;">LA INNOVACIÓN ES CUESTIÓN DE PERSONAS</h1>
+				
+				<span style="--b:1;background: transparent;"></span>
+				<span class="elespen" style="--b:2;--c:5;">
+					<img class="myImg" src="foto4.jpg" style="transform: scaleX(-1);filter: opacity(0.3);">
+				</span>
+				<span class="elespan" style="--b:2;--c:5;" onclick="modall(this,this.getElementsByTagName('p')[0].innerHTML)">
+					<video class="myImg" src="movie.mp4" autoplay muted loop></video>
+					<p class="textito">hola todo bien</p>
+					<p class="textsidisp">texto q si se displayea</p>
+				</span>
+				<span class="elespen" style="--b:3;--c:12;">
+					<img class="myImg" src="foto6.jpg" style="transform: scaleX(-1);filter: opacity(0.3);">
+				</span>
+				<span class="elespan" style="--b:3;--c:12;" onclick="modall(this,this.getElementsByTagName('p')[0].innerHTML)">
+					<img class="myImg" src="foto6.jpg">
+					<p class="textito">holanda todo biento</p>
+					<p class="textsidisp">texto q si se displayea</p>
+				</span>
+				<span class="elespen" style="--b:4;--c:22;">
+					<img class="myImg" src="foto/foto7.jpg" style="transform: scaleX(-1);filter: opacity(0.3);">
+				</span>
+				<span class="elespan" style="--b:4;--c:22;">
+					<img class="myImg" src="foto/foto7.jpg">
+					<p class="textito">todobien y bosque?</p>
+					<p class="textsidisp">texto q si se displayea</p>
+				</span>
+				<span class="elespen" style="--b:5;--c:26;">
+					<img class="myImg" src="foto8.jpg" style="transform: scaleX(-1);filter: opacity(0.3);">
+				</span>
+				<span class="elespan" style="--b:5;--c:26;">
+					<img class="myImg" src="foto8.jpg">
+					<p class="textito">y por casa?</p>
+					<p class="textsidisp">texto q si se displayea</p>
+				</span>
+				
+				
+				
+				
+			</div>
+		
+		</div>
+	
+		<div class="fondoui"></div>
+		<div class="snow"></div>
+<div class="scale">
+	<div class="boxi">
+	<span style="--i:1;"></span>
+	<span style="--i:2;"></span>
+	<span style="--i:3;"></span>
+	<span style="--i:4;"></span>
+	<span style="--i:5;"></span>
+	<span style="--i:6;"></span>
+	<span style="--i:7;"></span>
+	<span style="--i:8;"></span>
+	<span style="--i:9;"></span>
+	<span style="--i:10;"></span>
+	<span style="--i:11;"></span>
+	<span style="--i:12;"></span>
+	<span style="--i:13;"></span>
+	<span style="--i:14;"></span>
+	<span style="--i:15;"></span>
+	<span style="--i:16;"></span>
+	<span style="--i:17;"></span>
+	<span style="--i:18;"></span>
+	<span style="--i:19;"></span>
+	<span style="--i:20;"></span>
+	<span style="--i:21;"></span>
+	<span style="--i:22;"></span>
+	<span style="--i:23;"></span>
+</div>
+<div class="boxii">
+	<span style="--i:1;"></span>
+	<span style="--i:2;"></span>
+	<span style="--i:3;"></span>
+	<span style="--i:4;"></span>
+	<span style="--i:5;"></span>
+	<span style="--i:6;"></span>
+	<span style="--i:7;"></span>
+	<span style="--i:8;"></span>
+	<span style="--i:9;"></span>
+	<span style="--i:10;"></span>
+	<span style="--i:11;"></span>
+	<span style="--i:12;"></span>
+	<span style="--i:13;"></span>
+	<span style="--i:14;"></span>
+	<span style="--i:15;"></span>
+	<span style="--i:16;"></span>
+	<span style="--i:17;"></span>
+	<span style="--i:18;"></span>
+	<span style="--i:19;"></span>
+	<span style="--i:20;"></span>
+	<span style="--i:21;"></span>
+	<span style="--i:22;"></span>
+	<span style="--i:23;"></span>
+</div>
+
+
+	<div class="boxiii">
+	<span style="--i:1;"></span>
+	<span style="--i:2;"></span>
+	<span style="--i:3;"></span>
+	<span style="--i:4;"></span>
+	<span style="--i:5;"></span>
+	<span style="--i:6;"></span>
+	<span style="--i:7;"></span>
+	<span style="--i:8;"></span>
+	<span style="--i:9;"></span>
+	<span style="--i:10;"></span>
+	<span style="--i:11;"></span>
+	<span style="--i:12;"></span>
+	<span style="--i:13;"></span>
+	<span style="--i:14;"></span>
+	<span style="--i:15;"></span>
+	<span style="--i:16;"></span>
+	<span style="--i:17;"></span>
+	<span style="--i:18;"></span>
+	<span style="--i:19;"></span>
+	<span style="--i:20;"></span>
+	<span style="--i:21;"></span>
+	<span style="--i:22;"></span>
+	<span style="--i:23;"></span>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="segundo">
+	<div class="segundoinner">
+		<h1 style="z-index: 4;font-size: 56;text-align: center;">LA INNOVACIÓN ES CUESTIÓN DE PERSONAS</h1>
+		
+			<div class="segundoinneruno" style="height: 18vw;width: 40vw;background: green;position: absolute;left: 10vw;z-index: 1;"><img src="foto6.jpg" style="height: 85%;width:80%;padding-left: 2%;padding-top: 2%;object-fit: cover;border-radius: inherit;"></div>
+			<div class="segundoinnerdos" style="height: 18vw;width: 40vw;background: wheat;position: absolute;left: 20vw;z-index: 5;"></div>
+			<div class="segundoinnertres" style="height: 18vw;width: 40vw;background: yellow;position: absolute;left: 45vw;z-index: 6;display: flex;justify-content: right;"><h1 style="padding: 8%;font-size: 2.3vw;color: darkgoldenrod;letter-spacing: 2px;text-align: right;width: 60%;">Una persona sin imaginación es una persona sin alas</h1></div>
+			<div class="segundoinnercuatro" style="height: 18vw;width: 40vw;background: slateblue;position: absolute;left: 50vw;z-index: 3;"></div>
+			<div class="segundoinnercuatrovid" style="height: 18vw;width: 40vw;background: paleturquoise;position: absolute;left: 46vw;z-index: 4;display: flex;justify-content: center;align-items: center;">
+				<video src="movie.mp4" autoplay muted loop style="height: 90%;width:80%;object-fit: cover;border-radius: inherit;margin-right: 10%;"></video>
+			</div>
+			<div class="segundoinnercinco" style="height: 18vw;width: 40vw;background: goldenrod;position: absolute;left: 25vw;z-index: 2;"></div>
+			<div class="segundoinnerseis" style="height: 18vw;width: 40vw;background: lightcoral;position: absolute;left: 40vw;z-index: 7;"></div>
+			<div class="segundoinnerseisimg" style="height: 18vw;width: 40vw;position: absolute;left: 36vw;z-index: 8;"><img src="foto2.jpg" style="object-fit: cover;width: 100%;height: 100%;border-radius: inherit;"></div>
+			
+		
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="bolasfooter" style="width: 100vw;height: 200vh;position: relative;">
+<div class="footer">
+	<div style="position: absolute;width: 100vw;height: 100vh;top: 0;left: 0;background: #001923;">
+		<div class="marco" style="position: absolute;width: 100vw;height: 100vh;top: 0;left: 0;">
+			<div class="glass">
+				<h2>Contacto</h2>
+				<div class="formulario">
+					
+					<input id='nombre' class="datos" type="text" style="top: 3vh;" placeholder="Nombre"autocomplete='off'>
+					
+					<input id='mail' class="datos" type="text" style="top: 9vh;" placeholder="Mail" autocomplete='off'>
+					
+					<input id='telefono' class="datos" type="text" style="top:15vh" placeholder="Teléfono" autocomplete='off'>
+					
+					<input id="asunto" class="datos" type="text"
+					style="top: 21vh;" placeholder="Asunto" autocomplete='off'>
+					<h4 class="labels" style="top:30vh;">Contanos tu historia. Llegaste hasta acá y merecés crecimiento. </h4>
+					<textarea id="mensaje" class="datos" style="bottom: 0;height: 30vh;resize: none;overflow: scroll;width: 45vw;"></textarea>
+					
+					<input onclick="sendMsg()" class="datos" type="submit" value="Enviar" style="bottom:0;left: 50vw;width: 10vw;">
+				</div>
+
+			</div>
+
+
+		</div>
+		
+	</div>
+	
+</div>
+</div>
+<div class="footerista">
+				<ul>
+		<li style="--clr:#1877f2;">
+			<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+		</li>
+	</ul>
+	<ul>
+		<li style="--clr:#ff0000;">
+			<a href="#"><i class="fa-brands fa-youtube"></i></a>
+		</li>
+	</ul>
+	<ul>
+		<li style="--clr:#6441a5;">
+			<a href="#"><i class="fa-brands fa-twitch"></i></a>
+		</li>
+	</ul>
+	<ul>
+		<li style="--clr:#c32aa3;">
+			<a href="#"><i class="fa-brands fa-instagram"></i></a>
+		</li>
+	</ul>
+	<ul>
+		<li style="--clr:#25d366;">
+			<a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+		</li>
+	</ul>
+			</div>
+			<div class="footerista">
+				<div style=";position: absolute;top: 0;left: 10vw;width: 80vw;height: 15vw;border-top: 3px solid whitesmoke;display: flex;align-content: center;justify-content: center;color: grey;font-size: 1.5vw;">
+					<div style="width: 50%;margin: 5%;">
+						Banana Bang es un grupo de trabajado dedicado a la producción audiovisual<br><br>
+						El orgullo y la pasión en nuestro trabajo es el sentido para todo lo que hacemos
+
+					</div>
+					<div style="width: 50%;margin: 5%;text-align: right;">
+						✨Étoile Workshop✨
+					</div>
+				</div>
+			</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <video class="modal-content" id="img02" controls></video>
+  <div id="caption"></div>
+</div>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script type="text/javascript">
+	
+       
+
+let body=document.querySelector('body')
+let boxi=document.querySelector('.boxi')
+let segundoinner=document.querySelector('.segundoinner')
+
+	var r = document.querySelector(':root');
+
+let bolasfooter=document.querySelector('.footer')
+
+
+ let progress=document.querySelector('.progressbar')
+ let totalheight=document.body.scrollHeight-window.innerHeight
+ window.onscroll=function(){
+ 	let progressheight=(window.pageYOffset/totalheight)*100
+ 	progress.style.height=progressheight+'%'
+
+
+var lasbolas=bolasfooter.offsetTop*0.006
+
+var bonjouruno=segundoinner.offsetTop*-1;
+ 	var bonjourdos=segundoinner.offsetTop*-0.9;
+ 	var bonjourtres=segundoinner.offsetTop*-1.1;
+ 	var bonjourcuatro=segundoinner.offsetTop*-0.7;
+ 	var bonjourcuatrovid=segundoinner.offsetTop*-0.8;
+ 	var bonjourcinco=segundoinner.offsetTop*-0.5;
+ 	var bonjourseis=segundoinner.offsetTop*-0.8;
+ 	var bonjourseisimg=segundoinner.offsetTop*-0.6;
+
+
+ 		r.style.setProperty('--lasbolas',lasbolas+'vw');
+
+		r.style.setProperty('--segundouno',bonjouruno+'px');
+		r.style.setProperty('--segundodos',bonjourdos+'px');
+		r.style.setProperty('--segundotres',bonjourtres+'px');
+		r.style.setProperty('--segundocuatro',bonjourcuatro+'px');
+		r.style.setProperty('--segundocuatrovid',bonjourcuatrovid+'px');
+		r.style.setProperty('--segundocinco',bonjourcinco+'px');
+		r.style.setProperty('--segundoseis',bonjourseis+'px');
+		r.style.setProperty('--segundoseisimg',bonjourseisimg+'px');
+		
+
+ 	var thetaneg= window.pageYOffset/-1.2;
+
+ 	var thetaarriba=window.pageYOffset/4;
+
+	var theta =  window.pageYOffset/5;
+	var thetanoventa=(window.pageYOffset/5+90)
+	var thetatrans=(window.pageYOffset/2*-1);
+	var thetatranslento=(window.pageYOffset/5*-1);
+	var thetaamaga=window.pageYOffset/18
+
+	var transmas=(window.pageYOffset/-2);
+
+	var achica=window.pageYOffset/-100
+
+	
+
+		r.style.setProperty('--thetaarriba',thetaarriba+'deg');
+		r.style.setProperty('--thetacero',theta+'deg');
+		r.style.setProperty('--thetanoventa',thetanoventa+'deg');
+		r.style.setProperty('--transcero',thetatrans+'px');
+		r.style.setProperty('--transcerolento',thetatranslento+'px');
+		r.style.setProperty('--transamaga',thetaamaga+'px');
+
+		r.style.setProperty('--thetaneg',thetaneg+'deg');
+
+		r.style.setProperty('--transmas',transmas+'px');
+
+		r.style.setProperty('--achica',achica+'vw');
+ }
+
+
+
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementsByClassName("elespan");
+
+var modalImg = document.getElementById("img01");
+var modalVid = document.getElementById("img02");
+var captionText = document.getElementById("caption");
+
+
+
+   function modall(elemento,texto){
+
+    modal.style.display = "block";
+
+    switch(Boolean(elemento.getElementsByTagName('video')[0])){
+    	case true:
+    	modalVid.style.display='block'
+       modalVid.src = elemento.getElementsByTagName('video')[0].src;
+       modalImg.style.display='none';
+       break;
+       case false:
+        modalImg.style.display='block'
+       modalImg.src = elemento.getElementsByTagName('img')[0].src;
+       modalVid.style.display='none';
+       break;
+    }
+    	
+
+   
+
+
+      
+
+       captionText.innerHTML=texto
+
+ }
+
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+
+const form=document.querySelector('.formulario')
+
+function sendMsg(){
+	
+
+	const name=document.getElementById('nombre'),email=document.getElementById('mail'),telefono=document.getElementById('telefono'),asunto=document.getElementById('nombre'),msg=document.getElementById('nombre')
+
+Email.send({
+    SecureToken : "3be4db6a-bfe3-4708-9cf8-e1372db86605",
+    To : 'grandbaudio@gmail.com',
+    From : 'grandbaudio@gmail.com',
+    Subject : asunto.value,
+    Body : nombre.value+'<br>Teléfono: '+telefono.value+'<br>Mail: '+mail.value+'<br>'+msg.value
+}).then(
+  message => alert(message)
+);
+}
+
+</script>
+</body>
+</html>
