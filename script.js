@@ -17,58 +17,6 @@ let bolasfooter=document.querySelector('.footer')
  	progress.style.height=progressheight+'%'
 
 
-var lasbolas=bolasfooter.offsetTop*0.006
-
-var bonjouruno=segundoinner.offsetTop*-1;
- 	var bonjourdos=segundoinner.offsetTop*-0.9;
- 	var bonjourtres=segundoinner.offsetTop*-1.1;
- 	var bonjourcuatro=segundoinner.offsetTop*-0.7;
- 	var bonjourcuatrovid=segundoinner.offsetTop*-0.8;
- 	var bonjourcinco=segundoinner.offsetTop*-0.5;
- 	var bonjourseis=segundoinner.offsetTop*-0.8;
- 	var bonjourseisimg=segundoinner.offsetTop*-0.6;
-
-
- 		r.style.setProperty('--lasbolas',lasbolas+'vw');
-
-		r.style.setProperty('--segundouno',bonjouruno+'px');
-		r.style.setProperty('--segundodos',bonjourdos+'px');
-		r.style.setProperty('--segundotres',bonjourtres+'px');
-		r.style.setProperty('--segundocuatro',bonjourcuatro+'px');
-		r.style.setProperty('--segundocuatrovid',bonjourcuatrovid+'px');
-		r.style.setProperty('--segundocinco',bonjourcinco+'px');
-		r.style.setProperty('--segundoseis',bonjourseis+'px');
-		r.style.setProperty('--segundoseisimg',bonjourseisimg+'px');
-		
-
- 	var thetaneg= window.pageYOffset/-1.2;
-
- 	var thetaarriba=window.pageYOffset/4;
-
-	var theta =  window.pageYOffset/5;
-	var thetanoventa=(window.pageYOffset/5+90)
-	var thetatrans=(window.pageYOffset/2*-1);
-	var thetatranslento=(window.pageYOffset/5*-1);
-	var thetaamaga=window.pageYOffset/18
-
-	var transmas=(window.pageYOffset/-2);
-
-	var achica=window.pageYOffset/-100
-
-	
-
-		r.style.setProperty('--thetaarriba',thetaarriba+'deg');
-		r.style.setProperty('--thetacero',theta+'deg');
-		r.style.setProperty('--thetanoventa',thetanoventa+'deg');
-		r.style.setProperty('--transcero',thetatrans+'px');
-		r.style.setProperty('--transcerolento',thetatranslento+'px');
-		r.style.setProperty('--transamaga',thetaamaga+'px');
-
-		r.style.setProperty('--thetaneg',thetaneg+'deg');
-
-		r.style.setProperty('--transmas',transmas+'px');
-
-		r.style.setProperty('--achica',achica+'vw');
  }
 
 
