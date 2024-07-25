@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+        .container {
+            text-align: center;
+            width: 80vw;
+            height: 65vh;
+        }
+        .photos {
+            display: flex;
+            justify-content: center;
+            gap: 2vw;
+            position: relative;
+        }
+        .photo {
+            cursor: pointer;
+            width: 20vw;
+            height: 20vh;
+            overflow: hidden;
+            border: 3px solid lightblue;
+            border-radius: 50px;
+        }
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .caption {
+            display: none;
+            margin-top: 5vh;
+            transition: opacity 0.5s ease;
+            font-size: 2vw;
+        }
+        .caption.active {
+            display: block;
+            opacity: 1;
+        }
+        .caption.fade {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" style="position: fixed;height: 5vh;width: 100vw;z-index: 15;">
+         <a class="active" href="index.html" style="float: left;">Bananizate</a>
+                      
+                      <a href="#contacto" style="float:right;">Contacto</a>
+                      <a href="tecnica.html" style="float:right;">Técnica</a>
+                      <a href="filosofia.html" style="float:right;">Filosofía</a>
+                      
+                     
+        
+    </nav>
+    
+    <div class="progressbar"></div>
+    
+    
+
+
+
+
+
+<center>
+
+
+
+    
+
+<div class="segundo" style="height: 200vh;overflow: hidden; background: url('fondofilo.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: rgba(0, 0, 0, 0.95); background-blend-mode: overlay;">
+   
+         <div id="container" style="position: absolute;padding-top: 60vh;padding-left: -20vw;"></div>
+    <div class="segundoinner">
+
+         <div class="container" style="backdrop-filter: blur(15px);border-radius: 50px;">
+        <div class="photos">
+            <div class="photo" onclick="showCaption(0)">
+                <img src="res/foto1.jpg" alt="Foto 1">
+            </div>
+            <div class="photo" onclick="showCaption(1)">
+                <img src="res/foto2.jpg" alt="Foto 2">
+            </div>
+            <div class="photo" onclick="showCaption(2)">
+                <img src="res/foto3.jpg" alt="Foto 3">
+            </div>
+            <div class="photo" onclick="showCaption(3)">
+                <img src="res/foto4.jpg" alt="Foto 4">
+            </div>
+        </div>
+        <div id="captions">
+            <div class="caption" id="caption0">Cartel para res/Foto 1</div>
+            <div class="caption" id="caption1">Cartel para res/Foto 2</div>
+            <div class="caption" id="caption2">Cartel para res/Foto 3</div>
+            <div class="caption" id="caption3">Cartel para res/Foto 4</div>
+        </div>
+    </div>
+        
+        
+    </div>
+</div>
+
+
+</center>
+
+
+
+
+
+
+<div class="footerista">
+                <ul>
+        <li style="--clr:#1877f2;">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+    </ul>
+    <ul>
+        <li style="--clr:#ff0000;">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </li>
+    </ul>
+    <ul>
+        <li style="--clr:#6441a5;">
+            <a href="#"><i class="fa-brands fa-twitch"></i></a>
+        </li>
+    </ul>
+    <ul>
+        <li style="--clr:#c32aa3;">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+    </ul>
+    <ul>
+        <li style="--clr:#25d366;">
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </li>
+    </ul>
+</div>
+
+
+            <div class="footerista">
+                <div style=";position: absolute;top: 0;left: 10vw;width: 80vw;height: 15vw;border-top: 3px solid whitesmoke;display: flex;align-content: center;justify-content: center;color: grey;font-size: 1.5vw;">
+                    <div style="width: 50%;margin: 5%;">
+                        Banana Bang es un grupo de trabajado dedicado a la producción audiovisual<br><br>
+                        El orgullo y la pasión en nuestro trabajo es el sentido para todo lo que hacemos
+
+                    </div>
+                    <div style="width: 50%;margin: 5%;text-align: right;">
+                        ✨Étoile Workshop✨
+                    </div>
+                </div>
+            </div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <video class="modal-content" id="img02" controls></video>
+  <div id="caption"></div>
+</div>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+    <script src="script.js" defer></script>
+     <script>
+        function showCaption(index) {
+            const captions = document.querySelectorAll('.caption');
+            captions.forEach((caption, i) => {
+                if (i === index) {
+                    caption.classList.add('active');
+                    caption.classList.remove('fade');
+
+                } else {
+                    caption.classList.add('fade');
+                    setTimeout(() => {
+                        caption.classList.remove('active');
+                    }, 500); // match the transition duration
+                }
+            });
+        }
+
+
+        
+    </script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Crear la escena
+        const scene = new THREE.Scene();
+
+        // Crear la cámara
+        const camera = new THREE.PerspectiveCamera(25, window.innerWidth / window.innerHeight, 0.5, 1000);
+
+        // Crear el renderer
+        const renderer = new THREE.WebGLRenderer({ alpha: true }); // alpha: true para fondo transparente
+        renderer.setSize(window.innerWidth * 1.8, window.innerHeight * 1.8);
+        renderer.setClearColor(0x000000, 0); // fondo transparente
+        document.getElementById('container').appendChild(renderer.domElement);
+
+        // Crear una esfera (el "mundito")
+        const geometry = new THREE.SphereGeometry(1, 32, 32);
+        const material = new THREE.MeshBasicMaterial({ color: 0x0077ff, wireframe: true });
+        const sphere = new THREE.Mesh(geometry, material);
+        scene.add(sphere);
+
+        // Posicionar la cámara
+        camera.position.z = 5;
+
+        // Crear la función de animación
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Animar la esfera (rotación)
+            sphere.rotation.y += 0.005;
+            sphere.rotation.z += 0.0005;
+
+            // Renderizar la escena
+            renderer.render(scene, camera);
+        }
+
+        // Iniciar la animación
+        animate();
+
+        // Ajustar el tamaño del canvas al redimensionar la ventana
+        window.addEventListener('resize', () => {
+            const container = document.getElementById('container');
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+
+            renderer.setSize(width, height);
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+        });
+    </script>
+</body>
+</html>
