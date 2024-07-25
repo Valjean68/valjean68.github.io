@@ -188,7 +188,7 @@
         const scene = new THREE.Scene();
 
         // Crear la cámara
-        const camera = new THREE.PerspectiveCamera(25, window.innerWidth / window.innerHeight, 0.5, 1000);
+        const camera = new THREE.PerspectiveCamera(25, window.innerWidth / window.innerHeight, 0.5, 10);
 
         // Crear el renderer
         const renderer = new THREE.WebGLRenderer({ alpha: true }); // alpha: true para fondo transparente
@@ -211,7 +211,7 @@
 
             // Animar la esfera (rotación)
             sphere.rotation.y += 0.005;
-            sphere.rotation.z += 0.0005;
+            sphere.rotation.z += 0.000005;
 
             // Renderizar la escena
             renderer.render(scene, camera);
