@@ -72,9 +72,11 @@
     
 
 <div class="segundo" style="height: 200vh;overflow: hidden; background: url('fondofilo.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: rgba(0, 0, 0, 0.95); background-blend-mode: overlay;">
-   
-         <div id="container" style="position: absolute;padding-top: 60vh;padding-left: -20vw;"></div>
-    <div class="segundoinner">
+   <div style="top: 50vh;position: relative; left: 60vw;">
+       
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5hccfi90xni&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
+   </div>
+      <div class="segundoinner">
 
          <div class="container" style="backdrop-filter: blur(15px);border-radius: 50px;">
         <div class="photos">
@@ -182,54 +184,6 @@
 
         
     </script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script>
-        // Crear la escena
-        const scene = new THREE.Scene();
 
-        // Crear la cámara
-        const camera = new THREE.PerspectiveCamera(25, window.innerWidth / window.innerHeight, 0.5, 10);
-
-        // Crear el renderer
-        const renderer = new THREE.WebGLRenderer({ alpha: true }); // alpha: true para fondo transparente
-        renderer.setSize(window.innerWidth * 1.8, window.innerHeight * 1.8);
-        renderer.setClearColor(0x000000, 0); // fondo transparente
-        document.getElementById('container').appendChild(renderer.domElement);
-
-        // Crear una esfera (el "mundito")
-        const geometry = new THREE.SphereGeometry(1, 32, 32);
-        const material = new THREE.MeshBasicMaterial({ color: 0x0077ff, wireframe: true });
-        const sphere = new THREE.Mesh(geometry, material);
-        scene.add(sphere);
-
-        // Posicionar la cámara
-        camera.position.z = 5;
-
-        // Crear la función de animación
-        function animate() {
-            requestAnimationFrame(animate);
-
-            // Animar la esfera (rotación)
-            sphere.rotation.y += 0.005;
-            sphere.rotation.z += 0.000005;
-
-            // Renderizar la escena
-            renderer.render(scene, camera);
-        }
-
-        // Iniciar la animación
-        animate();
-
-        // Ajustar el tamaño del canvas al redimensionar la ventana
-        window.addEventListener('resize', () => {
-            const container = document.getElementById('container');
-            const width = container.clientWidth;
-            const height = container.clientHeight;
-
-            renderer.setSize(width, height);
-            camera.aspect = width / height;
-            camera.updateProjectionMatrix();
-        });
-    </script>
 </body>
 </html>
