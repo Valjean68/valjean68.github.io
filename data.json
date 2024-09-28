@@ -7,11 +7,11 @@
   {
     "nombre": "Ana",
     "opinion": "Es fácil de usar y muy informativo.",
-    "imagen": "img/ana.jpg"
+    "imagen": "ana.jpg"
   },
   {
     "nombre": "Carlos",
     "opinion": "El diseño es excelente.",
-    "imagen": "img/carlos.jpg"
+    "imagen": "carlos.jpg"
   }
 ]
