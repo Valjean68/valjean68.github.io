@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opiniones</title>
+    <style>
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  img {
+    border-radius: 50%; /* Para que las imágenes tengan borde redondeado */
+  }
+</style>
+
 </head>
 <body>
     <h1>Opiniones de Usuarios</h1>
@@ -14,7 +31,7 @@
     <script>
         
 
-// Función para obtener el JSON y listar las opiniones
+// Función para obtener el JSON y listar las opiniones con imagen
 fetch('./data.json')
   .then(response => {
     if (!response.ok) {
@@ -28,7 +45,23 @@ fetch('./data.json')
     // Iterar sobre cada entrada del JSON y crear elementos HTML
     data.forEach(item => {
       const li = document.createElement('li');
-      li.textContent = `${item.nombre}: "${item.opinion}"`;
+
+      // Crear la imagen
+      const img = document.createElement('img');
+      img.src = item.imagen;    // URL de la imagen desde el JSON
+      img.alt = `Imagen de ${item.nombre}`;
+      img.width = 100;          // Ajusta el ancho como prefieras
+      img.style.marginRight = '10px'; // Agregar algo de espacio entre la imagen y el texto
+      
+      // Crear el texto del nombre y la opinión
+      const texto = document.createElement('span');
+      texto.textContent = `${item.nombre}: "${item.opinion}"`;
+
+      // Agregar la imagen y el texto al <li>
+      li.appendChild(img);
+      li.appendChild(texto);
+
+      // Agregar el <li> a la lista
       lista.appendChild(li);
     });
   })
@@ -36,7 +69,6 @@ fetch('./data.json')
     console.error('Hubo un problema con la carga del JSON:', error);
   });
 
-        
     </script>
 </body>
 </html>
