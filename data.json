@@ -2,16 +2,16 @@
   {
     "nombre": "Juan",
     "opinion": "Me encanta este sitio web.",
-    "imagen": "juan.jpg"
+    "imagen": "/img/juan.jpg"
   },
   {
     "nombre": "Ana",
     "opinion": "Es fácil de usar y muy informativo.",
-    "imagen": "ana.jpg"
+    "imagen": "/img/ana.jpg"
   },
   {
     "nombre": "Carlos",
     "opinion": "El diseño es excelente.",
-    "imagen": "carlos.jpg"
+    "imagen": "/img/carlos.jpg"
   }
 ]
