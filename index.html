@@ -928,7 +928,7 @@ transition: 0.5s;
 				
 				<span style="--b:1;background: transparent;"></span>
 				<span class="elespen" style="--b:2;--c:5;">
-					<img class="myImg" src="res/movie.mp4" style="transform: scaleX(-1);filter: opacity(0.3);">
+					<video class="myImg" src="res/movie.mp4" style="transform: scaleX(-1);filter: opacity(0.3);" autoplay muted loop></video>
 				</span>
 				<span class="elespan" style="--b:2;--c:5;" onclick="modall(this,this.getElementsByTagName('p')[0].innerHTML)">
 					<video class="myImg" src="res/movie.mp4" autoplay muted loop></video>
@@ -1303,7 +1303,7 @@ function sendMsg(){
 	const name=document.getElementById('nombre'),email=document.getElementById('mail'),telefono=document.getElementById('telefono'),asunto=document.getElementById('nombre'),msg=document.getElementById('nombre')
 
 Email.send({
-    SecureToken : "3be4db6a-bfe3-4708-9cf8-e1372db86605",
+    SecureToken : "DDB14EDE2A12295E9AAA9C6F145E9096C2FC",
     To : 'grandbaudio@gmail.com',
     From : 'grandbaudio@gmail.com',
     Subject : asunto.value,
