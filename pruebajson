@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opiniones</title>
+</head>
+<body>
+    <h1>Opiniones de Usuarios</h1>
+    <ul id="lista-opiniones">
+        <!-- Aquí se mostrarán las opiniones -->
+    </ul>
+
+    <script>
+        
+
+// Función para obtener el JSON y listar las opiniones
+fetch('./data.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Error al cargar el archivo JSON');
+    }
+    return response.json();
+  })
+  .then(data => {
+    const lista = document.getElementById('lista-opiniones');
+    
+    // Iterar sobre cada entrada del JSON y crear elementos HTML
+    data.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.nombre}: "${item.opinion}"`;
+      lista.appendChild(li);
+    });
+  })
+  .catch(error => {
+    console.error('Hubo un problema con la carga del JSON:', error);
+  });
+
+        
+    </script>
+</body>
+</html>
