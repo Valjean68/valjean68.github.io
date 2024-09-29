@@ -1132,7 +1132,7 @@ transition: 0.5s;
 					
 					<input id="asunto" class="datos" type="text"
 					style="top: 21vh;" placeholder="Asunto" autocomplete='off'>
-					<h4 class="labels" style="top:30vh;">Contanos tu historia. Llegaste hasta acá y merecés crecimiento. </h4>
+					<h4 class="labels" style="top:30vh;">Contanos tu historia. Se viene lo mejor. </h4>
 					<textarea id="mensaje" class="datos" style="bottom: 0;height: 30vh;resize: none;overflow: scroll;width: 45vw;"></textarea>
 					
 					<input onclick="sendMsg()" class="datos" type="submit" value="Enviar" style="bottom:0;left: 50vw;width: 10vw;">
@@ -1390,7 +1390,7 @@ Email.send({
     Subject : asunto.value,
     Body : nombre.value+'<br>Teléfono: '+telefono.value+'<br>Mail: '+mail.value+'<br>'+msg.value
 }).then(
-  message => alert(message)
+  message => alert("Mensaje enviado. En breve recibirás respuesta y estaremos dando forma a proyectos interesantes. Lo mejor ya empezó 🔥")
 );
 }
 
