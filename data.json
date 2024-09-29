@@ -13,7 +13,8 @@
     "nombre": "Carlos",
     "opinion": "El diseño es excelente.",
     "imagen": "/img/carlos.jpg"
-  }{
+  },
+  {
     "nombre": "Juan",
     "opinion": "Me encanta este sitio web.",
     "imagen": "/img/juan.jpg"
@@ -27,7 +28,8 @@
     "nombre": "Carlos",
     "opinion": "El diseño es excelente.",
     "imagen": "/img/carlos.jpg"
-  }{
+  },
+  {
     "nombre": "Juan",
     "opinion": "Me encanta este sitio web.",
     "imagen": "/img/juan.jpg"
