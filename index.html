@@ -909,6 +909,30 @@ transition: 0.5s;
 			height: 25vw;
 			background: var(--bg);
 		}
+
+
+		.footeristaa{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 25vw;
+			background: var(--bg);
+		}
+		.footeristaa ul{
+			list-style-type: none;
+		}
+		.footeristaa ul li{
+			padding-top: 1%;
+		}
+
+		.normal li a{
+			text-decoration: none;
+			color: whitesmoke;
+		}
+		.normal li a:hover{
+			color: beige;
+		}
 	</style>
 	<meta charset="utf-8">
 	<title>Galeria</title>
@@ -1174,18 +1198,65 @@ transition: 0.5s;
 		</li>
 	</ul>
 			</div>
-			<div class="footerista">
-				<div style=";position: absolute;top: 0;left: 10vw;width: 80vw;height: 15vw;border-top: 3px solid whitesmoke;display: flex;align-content: center;justify-content: center;color: grey;font-size: 1.5vw;">
-					<div style="width: 50%;margin: 5%;">
-						Banana Bang es un grupo de trabajado dedicado a la producción audiovisual<br><br>
-						El orgullo y la pasión en nuestro trabajo es el sentido para todo lo que hacemos
+
+
+
+	
+			<div class="footeristaa">
+
+
+
+
+
+
+				<div style=";position: absolute;top: 0;left: 10vw;width: 80vw;height: 20vw;border-top: 3px solid whitesmoke;border-bottom: 3px solid whitesmoke;display: flex;align-content: center;justify-content: space-between;color: whitesmoke;font-size: 1.1vw;">
+
+
+
+
+					<div style="margin: 5%;flex: 1;">
+						<h2 style="margin-bottom: 5%;padding-bottom: 3%;">INSIEME VINCERE</h2>
+						<p style="font-size: 0.9vw;">Aportamos al crecimiento de marcas, avanzando juntos en un camino estratégico. Contamos con la técnica necesaria para ofrecer una posición estratégica en el mercado, resaltando diferenciadores e impulsando la innovación.<br><br>Nuestro objetivo es llevar propuestas de la manera mas eficiente y comercializarlas de manera efectiva</p>
+					</div>
+
+
+
+					<div style="margin: 5%;flex: 1;">
+						<h3 style="border-bottom: 3px solid whitesmoke;margin-bottom: 5%;padding-bottom: 3%;">Contacto</h3>
+						<ul class="normal" style="display: grid;grid-template-columns: repeat(2, 1fr);">
+							<i class="fa-brands fa-whatsapp"></i><li>+54 1162826362</li>
+							<i class="fa fa-envelope"></i><li>contacto@vinceremoinsieme.com</li>
+							<i class="fa fa-terminal" aria-hidden="true"></i><li>Servicio 24/7</li>
+							<li><i class="fa fa-home" aria-hidden="true"></i><li>Buenos Aires</li>
+						</ul>
 
 					</div>
-					<div style="width: 50%;margin: 5%;text-align: right;">
-						✨Étoile Workshop✨
+
+
+					<div style="margin: 5%;flex: 1;">
+						<h3 style="border-bottom: 3px solid whitesmoke;margin-bottom: 5%;padding-bottom: 3%;">Sitemap</h3>
+						<ul class="normal">
+							<li><a href="filosofia.html">Filosofía</a></li>
+							<li><a href="tecnica.html">Técnica</a></li>
+							<li><a href="#contacto">Contacto</a></li>
+							<li><a href="faqs.html">FAQs</a></li>
+							<li><a href="terminosycondiciones.html">Términos y Condiciones</a></li>
+						</ul>
 					</div>
+
+
+
 				</div>
+
+				
+				
+
+
+
+
 			</div>
+								<h4 style="display: flex;color: grey;justify-content: center;position: relative;align-items: center;background: #001923;padding-bottom: 3%;">© 2024 vinceremoinsieme.com | Todos los derechos reservados</h4>
+
 
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
