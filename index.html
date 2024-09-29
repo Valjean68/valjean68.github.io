@@ -1346,10 +1346,12 @@ fetch('./data.json')
       img.alt = `Imagen de ${item.nombre}`;
       img.width = 100;          // Ajusta el ancho como prefieras
       img.style.marginRight = '10px'; // Agregar algo de espacio entre la imagen y el texto
+      img.style.float = 'left'
       
       // Crear el texto del nombre y la opinión
       const texto = document.createElement('span');
       texto.textContent = `${item.nombre}: "${item.opinion}"`;
+      texto.style.float= 'right'
 
         li.style.display='block';
       li.style.alignItems='center';
