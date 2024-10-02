@@ -48,9 +48,12 @@ const rssFeedUrl = 'https://www.ambito.com/rss/pages/negocios.xml'; // Reemplaza
                     data.items.forEach(item => {
                         const listItem = document.createElement('li');
                         const link = document.createElement('a');
+                        const img = document.createElement('img');
                         link.href = item.link;
                         link.textContent = item.title;
+                        img.src = item.enclosure;
                         listItem.appendChild(link);
+                        listItem.appendChild(img);
                         newsList.appendChild(listItem);
                     });
                 } else {
