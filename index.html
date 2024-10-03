@@ -1416,7 +1416,9 @@ fetch('./data.json')
       const img = document.createElement('img');
       img.src = item.imagen;    // URL de la imagen desde el JSON
       img.alt = `Imagen de ${item.nombre}`;
-      img.width = 100;          // Ajusta el ancho como prefieras
+      img.style.width = '10vw';
+      img.style.height = 'auto';
+      img.style.borderRadius = '15px';
       img.style.marginRight = '10px'; // Agregar espacio entre la imagen y el texto
 
       // Crear el contenedor de texto del nombre y la opinión
