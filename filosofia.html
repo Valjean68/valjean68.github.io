@@ -262,7 +262,7 @@ const rssFeedUrl = 'https://www.ambito.com/rss/pages/negocios.xml'; // Reemplaza
                         img.style.width = '10vw';
                         img.style.height = 'auto';
                         img.style.borderRadius = '15px';
-                        content = item.content;
+                        content.textContent = item.content;
                         listItem.appendChild(link);
                         listItem.appendChild(content)
                         listItem.appendChild(img);
