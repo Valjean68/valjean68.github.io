@@ -61,10 +61,11 @@
     list-style-type: none;
     margin: 3vw;
     position: relative;
-    top: 20vh;
-    height: 50vh;
+    top: -40vh;
+    height: 60vh;
     width: 80vw;
     overflow: scroll;
+    color: beige;
   }
 
     
@@ -109,7 +110,7 @@
         
 
     <div>
-        <h1 class="segundoinner">Noticias destacadas</h1>
+        <h1 class="segundoinner" style="top: -40vh">Noticias destacadas</h1>
 
         <ul id="newsList">
         <!-- Aquí se mostrarán las opiniones -->
@@ -251,18 +252,18 @@ const rssFeedUrl = 'https://www.ambito.com/rss/pages/negocios.xml'; // Reemplaza
                         listItem.style.padding = '1vw';
                         listItem.style.justifyContent = 'space-between';
                         listItem.style.fontSize = '1.1vw';
-                        listItem.style.backgroundColor = 'rgba(255, 255, 255, 0.6)';
+                        listItem.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
                         listItem.style.borderRadius = '15px';
                         listItem.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
                         
                         link.href = item.link;
                         link.textContent = item.title;
-                        link.style.fontSize = '1vw';
+                        link.style.fontSize = '1.2vw';
                         img.src = item.enclosure.link;
                         img.style.width = '10vw';
                         img.style.height = 'auto';
                         img.style.borderRadius = '15px';
-                        content.textContent = item.content;
+                        content.innerHTML = item.content;
                         listItem.appendChild(link);
                         listItem.appendChild(content)
                         listItem.appendChild(img);
