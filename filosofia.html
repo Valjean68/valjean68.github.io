@@ -54,6 +54,16 @@
         .caption.fade {
             opacity: 0;
         }
+
+        #newList ul {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+    top: 20vh;
+    height: 30vh;
+    width: 80vw;
+    overflow: scroll;
+  }
     </style>
 </head>
 <body>
@@ -83,18 +93,24 @@
     
 
 
-<div class="segundo" style="height: 200vh; width: 100vw; background: url('res/fondofilo.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: rgba(0, 0, 0, 0.95); background-blend-mode: overlay;overflow: hidden;">  
-    <div class="parallax" style="height: 50vh;width: 50vw;top: 90vh;right: 10vw;position: absolute;">
-        <div style="object-fit: contain;opacity: 0.3">
+<div class="segundo" style="height: 400vh; width: 100vw; background: url('res/fondofilo.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: rgba(0, 0, 0, 0.95); background-blend-mode: overlay;overflow: hidden;">  
+    <div class="parallax" style="height: 50vh;width: 50vw;top: 90vh;right: 10vw;position: absolute;border-radius: 15px;">
+        <div style="object-fit: contain;opacity: 0.3;">
                     <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5dv1qe7od2v&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-400&amp;ly=400&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
 
             
         </div>
 
     </div>
-    <div class="segundoinner">
 
-         <div class="container" style="backdrop-filter: blur(15px);border-radius: 50px;">
+        <h1>Noticias destacadas</h1>
+
+    <div class="segundoinner">
+        <ul id="newsList">
+        <!-- Aquí se mostrarán las opiniones -->
+    </ul>
+
+         <div class="container" style="backdrop-filter: blur(15px);border-radius: 50px; position: relative; top: 150vh;">
         <div class="photos">
             <div class="photo" onclick="showCaption(0)">
                 <img src="res/foto1.jpg" alt="Foto 1">
@@ -204,7 +220,52 @@ window.addEventListener('scroll', function() {
   // Ajusta la velocidad del parallax cambiando el valor multiplicador (en este caso 0.5)
   parallax.style.top = scrollPosition * 1.2 + 'px';
 });
-        
+
+
+const rssFeedUrl = 'https://www.ambito.com/rss/pages/negocios.xml'; // Reemplaza con la URL de tu feed RSS
+
+        // Función para cargar y mostrar noticias
+        async function loadNews() {
+            try {
+                const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`);
+                const data = await response.json();
+
+                if (data.status === 'ok') {
+                    const newsList = document.getElementById('newsList');
+
+                    data.items.forEach(item => {
+                        const listItem = document.createElement('li');
+                        const link = document.createElement('a');
+                        const img = document.createElement('img');
+
+                        listItem.style.border = '3px solid whitesmoke';
+                        listItem.style.display = 'flex';
+                        listItem.style.alignContent = 'center';
+                        listItem.style.justifyContent = 'space-between';
+                        listItem.style.fontSize = '1.1vw';
+                        
+                        link.href = item.link;
+                        link.textContent = item.title;
+                        img.src = item.enclosure.link;
+                        img.style.width = '10vw';
+                        img.style.height = 'auto';
+                        img.style.borderRadius = '15px';
+                        listItem.appendChild(link);
+                        listItem.appendChild(img);
+                        newsList.appendChild(listItem);
+                        console.log(item)
+
+                    });
+                } else {
+                    console.error('No se pudo cargar el feed RSS.');
+                }
+            } catch (error) {
+                console.error('Error al cargar el feed RSS:', error);
+            }
+        }
+
+        // Cargar noticias al cargar la página
+        window.addEventListener('load', loadNews);
     </script>
  
 </body>
