@@ -2,7 +2,6 @@
 <html>
 <head> 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Galeria</title>
     <link rel="stylesheet" href="styles.css">
@@ -36,7 +35,7 @@
             height: 20vh;
             overflow: hidden;
             border: 3px solid lightblue;
-            border-radius: 50px;
+            border-radius: 5px;
         }
         .photo img {
             width: 100%;
@@ -61,19 +60,44 @@
     list-style-type: none;
     margin: 3vw;
     position: relative;
-    top: -40vh;
-    height: 60vh;
-    width: 80vw;
+    top: 0vh;
+    height: 40vh;
+    width: 60vw;
     overflow: scroll;
     color: beige;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
   }
 
+
+.footeristaa{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25vw;
+            background: var(--bg);
+        }
+        .footeristaa ul{
+            list-style-type: none;
+        }
+        .footeristaa ul li{
+            padding-top: 1%;
+        }
+
+        .normal li a{
+            text-decoration: none;
+            color: whitesmoke;
+        }
+        .normal li a:hover{
+            color: beige;
+        }
     
     </style>
 </head>
 <body>
     <nav class="navbar" style="position: fixed;height: 5vh;width: 100vw;z-index: 15;">
-         <a class="active" href="index.html" style="float: left;">Bananizate</a>
+         <a class="active" href="index.html" style="float: left;">Crezcamos Juntos</a>
                       
                       <a href="#contacto" style="float:right;">Contacto</a>
                       <a href="tecnica.html" style="float:right;">Técnica</a>
@@ -108,15 +132,68 @@
     </div>
 
         
+<div style="position: relative;width: 100vw;">
+    <div style="color: beige;padding-top: 20vh;width: 80vw;">
+            <h1>Ofrecemos Pipeline</h1><br>
+            <h4>Realizamos un monitoreo continuo de las circunstancias, medimos, planificamos y testeamos<br> Desplegamos una solución donde es requerida</h4>
+        </div>
+        <div style="color: beige;width: 80vw;">
+            <div style="display: grid;grid-template-columns: repeat(2, 1fr);gap: 4vw;padding-top: 10vh;margin: 3vw; align-items: center;">
+            <div style="text-align: left;">
+                <h4>Frontend: Desarrollo de interfaces atractivas y funcionales que mejoran la experiencia del usuario</h4>
+                <br>
+                <h4>IT: Soluciones tecnológicas personalizadas para optimizar procesos y aumentar la eficiencia</h4><br>
+                <h4>Gestoría: Asesoramiento y gestión de trámites comerciales para facilitar el crecimiento de tu negocio</h4>
 
+
+            </div>
+            <div style="width: 30vw;"><img src="res/cicd.jpg" style="object-fit:cover;width: 100%;"></div>
+            
+        </div>
+        </div>
+        
+    
+</div>
+<div style="border-bottom: 3px solid whitesmoke; padding: 5vh;width: 80vw;"></div>
     <div>
-        <h1 class="segundoinner" style="top: -40vh">Noticias destacadas</h1>
+        <div style="color: beige;padding-top: 10vh;width: 80vw;">
+            <h1>¿Qué está pasando hoy?</h1><br>
+                    
+        </div>
+        
 
         <ul id="newsList">
         <!-- Aquí se mostrarán las opiniones -->
     </ul>
+<div style="color: beige;padding-top: 10vh;width: 80vw;">
+            <h4>Los escenarios son cambiantes, estar atentos nos permite mantenernos ágiles para operar en la realidad</h4>
 
-         <div class="container" style="backdrop-filter: blur(15px);border-radius: 50px; position: relative; top: 150vh;">
+
+
+            
+<br><br><br>                        <p>Nosotros ofrecemos pipeline para la promoción de negocios en áreas clave.
+
+<br>
+Con nuestro enfoque integral, damos nuestro aporte a organizaciones que buscan destacarse y crecer en un mercado competitivo.</p>            
+        </div>
+
+<div style="border-bottom: 3px solid whitesmoke; padding: 5vh;width: 80vw;"></div>
+
+        
+<div style="position: relative;height: 100vh;width: 100vw;">
+    <div style="color: beige;padding-top: 20vh;width: 80vw;">
+            <h1>CI/CD</h1><br>
+            <h4>Continuous Integration, Continuous Deployment</h4>
+            <img src="res/workflow.jpg" style="max-width: 40vw;padding: 10vh;">
+            <p>En nuestra práctica de CI/CD, promovemos la eficiencia mediante la automatización de procesos, la colaboración entre equipos para un trabajo ágil, la calidad a través de pruebas automatizadas, y la adaptabilidad para responder rápidamente a los cambios en los requisitos del negocio. Estos valores garantizan que podamos ofrecer un valor constante y efectivo a nuestros clientes.</p>
+        </div>
+        
+    
+</div>
+<div style="border-bottom: 3px solid whitesmoke; padding: 5vh;width: 80vw;"></div>
+
+
+         <div class="container" style="backdrop-filter: blur(15px);border-radius: 15px; position: relative; top: 20vh;">
         <div class="photos">
             <div class="photo" onclick="showCaption(0)">
                 <img src="res/foto1.jpg" alt="Foto 1">
@@ -131,12 +208,7 @@
                 <img src="res/foto4.jpg" alt="Foto 4">
             </div>
         </div>
-        <div id="captions">
-            <div class="caption" id="caption0">Cartel para res/Foto 1</div>
-            <div class="caption" id="caption1">Cartel para res/Foto 2</div>
-            <div class="caption" id="caption2">Cartel para res/Foto 3</div>
-            <div class="caption" id="caption3">Cartel para res/Foto 4</div>
-        </div>
+        
     </div>
         
         
@@ -145,7 +217,6 @@
 
 
 </center>
-
 
 
 
@@ -177,21 +248,65 @@
             <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
         </li>
     </ul>
-</div>
-
-
-            <div class="footerista">
-                <div style=";position: absolute;top: 0;left: 10vw;width: 80vw;height: 15vw;border-top: 3px solid whitesmoke;display: flex;align-content: center;justify-content: center;color: grey;font-size: 1.5vw;">
-                    <div style="width: 50%;margin: 5%;">
-                        Banana Bang es un grupo de trabajado dedicado a la producción audiovisual<br><br>
-                        El orgullo y la pasión en nuestro trabajo es el sentido para todo lo que hacemos
-
-                    </div>
-                    <div style="width: 50%;margin: 5%;text-align: right;">
-                        ✨Étoile Workshop✨
-                    </div>
-                </div>
             </div>
+
+
+
+    
+            <div class="footeristaa">
+
+
+
+
+
+
+                <div style=";position: absolute;top: 0;left: 10vw;width: 80vw;height: 20vw;border-top: 3px solid whitesmoke;border-bottom: 3px solid whitesmoke;display: flex;align-content: center;justify-content: space-between;color: whitesmoke;font-size: 1.1vw;">
+
+
+
+
+                    <div style="margin: 5%;flex: 1;">
+                        <h2 style="margin-bottom: 5%;padding-bottom: 3%;">INSIEME VINCERE</h2>
+                        <p style="font-size: 0.9vw;">Aportamos al crecimiento de marcas, avanzando juntos en un camino estratégico. Contamos con la técnica necesaria para ofrecer una posición estratégica en el mercado, resaltando diferenciadores e impulsando la innovación.<br><br>Nuestro objetivo es llevar propuestas de la manera mas eficiente y comercializarlas de manera efectiva</p>
+                    </div>
+
+
+
+                    <div style="margin: 5%;flex: 1;">
+                        <h3 style="border-bottom: 3px solid whitesmoke;margin-bottom: 5%;padding-bottom: 3%;">Contacto</h3>
+                        <ul class="normal" style="display: grid;grid-template-columns: repeat(2, 1fr);">
+                            <i class="fa-brands fa-whatsapp"></i><li>+54 1162826362</li>
+                            <i class="fa fa-envelope"></i><li>contacto@vinceremoinsieme.com</li>
+                            <i class="fa fa-terminal" aria-hidden="true"></i><li>Servicio 24/7</li>
+                            <li><i class="fa fa-home" aria-hidden="true"></i><li>Buenos Aires</li>
+                        </ul>
+
+                    </div>
+
+
+                    <div style="margin: 5%;flex: 1;">
+                        <h3 style="border-bottom: 3px solid whitesmoke;margin-bottom: 5%;padding-bottom: 3%;">Sitemap</h3>
+                        <ul class="normal">
+                            <li><a href="filosofia.html">Filosofía</a></li>
+                            <li><a href="tecnica.html">Técnica</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                            <li><a href="faqs.html">FAQs</a></li>
+                            <li><a href="terminosycondiciones.html">Términos y Condiciones</a></li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+
+                
+                
+
+
+
+
+            </div>
+                                <h4 style="display: flex;color: grey;justify-content: center;position: relative;align-items: center;background: #001923;padding-bottom: 3%;">© 2024 vinceremoinsieme.com | Todos los derechos reservados</h4>
 
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
@@ -205,20 +320,7 @@
 </script>
     <script src="script.js" defer></script>
      <script>
-        function showCaption(index) {
-            const captions = document.querySelectorAll('.caption');
-            captions.forEach((caption, i) => {
-                if (i === index) {
-                    caption.classList.add('active');
-                    caption.classList.remove('fade');
-
-                } else {
-                    caption.classList.add('fade');
-                    caption.classList.remove('active');
-                }
-            });
-        }
-
+        
 window.addEventListener('scroll', function() {
   let parallax = document.querySelector('.parallax');
   let scrollPosition = window.pageYOffset;
@@ -246,23 +348,30 @@ const rssFeedUrl = 'https://www.ambito.com/rss/pages/negocios.xml'; // Reemplaza
                         const content = document.createElement('p');
 
                         listItem.style.borderTop = '3px solid whitesmoke';
-                        listItem.style.display = 'flex';
-                        listItem.style.alignContent = 'center';
+                        listItem.style.display = 'grid';
+                        listItem.style.gridTemplateColumns = '1fr 1.5fr 0.5fr';
+                        listItem.style.gap = '2vw';
+                        listItem.style.alignContent = 'space-between';
                         listItem.style.margin = '2vw';
                         listItem.style.padding = '1vw';
-                        listItem.style.justifyContent = 'space-between';
+                        listItem.style.justifyContent = 'center';
                         listItem.style.fontSize = '1.1vw';
-                        listItem.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
-                        listItem.style.borderRadius = '15px';
+                        listItem.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
                         listItem.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+                        listItem.style.flex = '1';
+                        listItem.style.textAlign = 'left';
+                        listItem.style.alignItems = 'center';
+                        
+
                         
                         link.href = item.link;
                         link.textContent = item.title;
-                        link.style.fontSize = '1.2vw';
+                        link.style.fontSize = '1.1vw';
+                        link.style.color = 'lightblue';
                         img.src = item.enclosure.link;
                         img.style.width = '10vw';
                         img.style.height = 'auto';
-                        img.style.borderRadius = '15px';
+                        img.style.borderRadius = '5px';
                         content.innerHTML = item.content;
                         listItem.appendChild(link);
                         listItem.appendChild(content)
