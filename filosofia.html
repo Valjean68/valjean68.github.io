@@ -59,10 +59,10 @@
 
 #newsList {
     list-style-type: none;
-    padding: 0;
+    padding: 3vw;
     position: relative;
     top: 20vh;
-    height: 30vh;
+    height: 50vh;
     width: 80vw;
     overflow: scroll;
   }
@@ -107,7 +107,7 @@
         
 
     <div>
-        <h1>Noticias destacadas</h1>
+        <h1 class="segundoinner">Noticias destacadas</h1>
 
         <ul id="newsList">
         <!-- Aquí se mostrarán las opiniones -->
@@ -241,7 +241,7 @@ const rssFeedUrl = 'https://www.ambito.com/rss/pages/negocios.xml'; // Reemplaza
                         const link = document.createElement('a');
                         const img = document.createElement('img');
 
-                        listItem.style.border = '3px solid whitesmoke';
+                        listItem.style.borderTop = '3px solid whitesmoke';
                         listItem.style.display = 'flex';
                         listItem.style.alignContent = 'center';
                         listItem.style.justifyContent = 'space-between';
