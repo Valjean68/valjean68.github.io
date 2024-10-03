@@ -242,6 +242,7 @@ const rssFeedUrl = 'https://www.ambito.com/rss/pages/negocios.xml'; // Reemplaza
                         const listItem = document.createElement('li');
                         const link = document.createElement('a');
                         const img = document.createElement('img');
+                        const content = document.createElement('p');
 
                         listItem.style.borderTop = '3px solid whitesmoke';
                         listItem.style.display = 'flex';
@@ -261,7 +262,9 @@ const rssFeedUrl = 'https://www.ambito.com/rss/pages/negocios.xml'; // Reemplaza
                         img.style.width = '10vw';
                         img.style.height = 'auto';
                         img.style.borderRadius = '15px';
+                        content = item.content;
                         listItem.appendChild(link);
+                        listItem.appendChild(content)
                         listItem.appendChild(img);
                         newsList.appendChild(listItem);
                         console.log(item)
