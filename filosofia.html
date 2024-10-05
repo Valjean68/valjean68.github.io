@@ -15,46 +15,7 @@
             height: 300vh;
             width: 100vw;
         }
-        .container {
-            position: relative;
-            top: -10vh;
-            text-align: center;
-            width: 80vw;
-            height: 45vh;
-        }
-        .photos {
-            display: flex;
-            justify-content: center;
-            gap: 2vw;
-            position: relative;
-            padding: 3%;
-        }
-        .photo {
-            cursor: pointer;
-            width: 20vw;
-            height: 20vh;
-            overflow: hidden;
-            border: 3px solid lightblue;
-            border-radius: 5px;
-        }
-        .photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .caption {
-            display: none;
-            margin-top: 5vh;
-            transition: opacity 0.5s ease;
-            font-size: 2vw;
-        }
-        .caption.active {
-            display: block;
-            opacity: 1;
-        }
-        .caption.fade {
-            opacity: 0;
-        }
+        
 
 #newsList {
     list-style-type: none;
@@ -68,6 +29,61 @@
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
   }
+
+
+a{
+    text-decoration: none;
+}
+   .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3vw;
+            width: 80vw;
+            position: relative;
+            backdrop-filter: blur(15px);
+            padding: 3vw;
+            margin-bottom: 10vh;
+        }
+        .grid-item {
+            position: relative;
+            width: auto;
+            height: 20vh;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 8vh;
+        }
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 10px;
+        }
+        .grid-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: beige;
+        }
+}
 
 
 .footeristaa{
@@ -121,15 +137,8 @@
 
     
 
-<div class="segundo" style="height: 400vh; width: 100vw; background: url('res/fondofilo.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: rgba(0, 0, 0, 0.95); background-blend-mode: overlay;overflow: hidden;">  
-    <div class="parallax" style="height: 50vh;width: 50vw;top: 90vh;right: 10vw;position: absolute;border-radius: 15px;">
-        <div style="object-fit: contain;opacity: 0.3;">
-                    <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5dv1qe7od2v&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-400&amp;ly=400&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
-
-            
-        </div>
-
-    </div>
+<div class="segundo" style="height: auto; width: 100vw; background: url('res/fondofilo.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; background-color: rgba(0, 0, 0, 0.95); background-blend-mode: overlay;overflow: hidden;">  
+   
 
         
 <div style="position: relative;width: 100vw;">
@@ -147,7 +156,7 @@
 
 
             </div>
-            <div style="width: 30vw;"><img src="res/cicd.jpg" style="object-fit:cover;width: 100%;"></div>
+            <div style="width: 30vw;"><img src="res/foto1.jpg" style="object-fit:cover;width: 100%;"></div>
             
         </div>
         </div>
@@ -184,32 +193,84 @@ Con nuestro enfoque integral, damos nuestro aporte a organizaciones que buscan d
     <div style="color: beige;padding-top: 20vh;width: 80vw;">
             <h1>CI/CD</h1><br>
             <h4>Continuous Integration, Continuous Deployment</h4>
-            <img src="res/workflow.jpg" style="max-width: 40vw;padding: 10vh;">
+            <img src="res/foto2.jpg" style="max-width: 40vw;padding: 10vh;">
             <p>En nuestra práctica de CI/CD, promovemos la eficiencia mediante la automatización de procesos, la colaboración entre equipos para un trabajo ágil, la calidad a través de pruebas automatizadas, y la adaptabilidad para responder rápidamente a los cambios en los requisitos del negocio. Estos valores garantizan que podamos ofrecer un valor constante y efectivo a nuestros clientes.</p>
         </div>
         
     
 </div>
-<div style="border-bottom: 3px solid whitesmoke; padding: 5vh;width: 80vw;"></div>
+<div style="border-bottom: 3px solid whitesmoke; padding: 5vh;width: 80vw;top: 20vh;position: relative;"></div>
 
-
-         <div class="container" style="backdrop-filter: blur(15px);border-radius: 15px; position: relative; top: 20vh;">
-        <div class="photos">
-            <div class="photo" onclick="showCaption(0)">
-                <img src="res/foto1.jpg" alt="Foto 1">
-            </div>
-            <div class="photo" onclick="showCaption(1)">
-                <img src="res/foto2.jpg" alt="Foto 2">
-            </div>
-            <div class="photo" onclick="showCaption(2)">
-                <img src="res/foto3.jpg" alt="Foto 3">
-            </div>
-            <div class="photo" onclick="showCaption(3)">
-                <img src="res/foto4.jpg" alt="Foto 4">
-            </div>
+<div style="color: beige;padding-top: 40vh;width: 80vw;">
+            <h1>Recursos de Compliance</h1><br>
+            <h4>Compromiso con la Excelencia: Soluciones Eficientes Basadas en Estándares y Mejores Prácticas</h4>
+            <p>Los principios y valores que nos guían se reflejan en el cumplimiento riguroso de estándares y mejores prácticas reconocidas a nivel global. Estos documentos demuestran nuestro compromiso con la adopción de soluciones eficientes y óptimas, entendidas como las más adecuadas para las exigencias actuales. <br>
+            A través de estas guías, reafirmamos nuestro compromiso con estos requerimientos, implementando soluciones que no solo cumplen con las expectativas, sino que también reflejan un enfoque proactivo hacia la mejora continua y la excelencia operativa.</p>
         </div>
-        
+
+
+<div class="grid">
+    <div class="grid-item">
+        <a href="#" download>
+            <img src="https://via.placeholder.com/200" alt="Imagen 1">
+            <div class="overlay">Descargar White Paper</div>
+             
+        <div class="caption">Título de Imagen 1</div>
+        </a>
     </div>
+    <div class="grid-item">
+        <a href="#" download>
+            <img src="https://via.placeholder.com/200" alt="Imagen 2">
+            <div class="overlay">Descargar White Paper</div>
+        <div class="caption">Título de Imagen 1</div>
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="#" download>
+            <img src="https://via.placeholder.com/200" alt="Imagen 3">
+            <div class="overlay">Descargar White Paper</div>
+        <div class="caption">Título de Imagen 1</div>
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="#" download>
+            <img src="https://via.placeholder.com/200" alt="Imagen 4">
+            <div class="overlay">Descargar White Paper</div>
+        <div class="caption">Título de Imagen 1</div>
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="#" download>
+            <img src="https://via.placeholder.com/200" alt="Imagen 1">
+            <div class="overlay">Descargar White Paper</div>
+             
+        <div class="caption">Título de Imagen 1</div>
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="#" download>
+            <img src="https://via.placeholder.com/200" alt="Imagen 2">
+            <div class="overlay">Descargar White Paper</div>
+        <div class="caption">Título de Imagen 1</div>
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="#" download>
+            <img src="https://via.placeholder.com/200" alt="Imagen 3">
+            <div class="overlay">Descargar White Paper</div>
+        <div class="caption">Título de Imagen 1</div>
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="#" download>
+            <img src="https://via.placeholder.com/200" alt="Imagen 4">
+            <div class="overlay">Descargar White Paper</div>
+        <div class="caption">Título de Imagen 1</div>
+        </a>
+    </div>
+</div>
+
+         
         
         
     </div>
