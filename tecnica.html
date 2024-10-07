@@ -2,26 +2,129 @@
 <html>
 <head>
     <meta charset="utf-8">
+
     <title>Galeria</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style type="text/css">
-      .gridtecnico{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+      
+
+           .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo */
+            gap: 20px; /* Espacio entre elementos */
+            padding: 20px;
+            width: 80vw;
+        }
+        
+        .grid-item {
+            padding: 10px;
+            text-align: left;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            height: 20vh;
         }
 
-        .tecnigrid{
-          width: auto;
-          height: auto;
-          text-align: left;
-          background: rgba(0, 0, 0, 0.4);
-          padding: 3vw;
-          margin: 3vw;
-          border: 3px solid whitesmoke;
-          border-radius: 5px;
-        
+        .grid-item img {
+            width: 50px; /* Ajusta el tamaño de la imagen */
+            margin-right: 10px;
         }
+
+
+
+                .carrusel {
+            display: flex;
+            overflow-x: auto; /* Permite el desplazamiento horizontal */
+            padding: 20px;
+            border: 1px solid #ccc;
+            gap: 5vw; /* Espacio entre elementos */
+            width: 70vw;
+            margin: 4vw;
+        }
+
+         .carrusel .item {
+            flex: 0 0 auto; /* Evita que los elementos se encojan */
+            width: 20vw; /* Ajusta el ancho según sea necesario */
+            border: 1px solid black;
+            border-radius: 8px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .carrusel .item img {
+            width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+            border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+        }
+
+        .carrusel .item p {
+            margin: 10px 0 0; /* Margen para el texto */
+            color: rgba(0, 0, 30, 1.0);
+        }
+
+
+        .grido{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 4vw;
+          margin: 10vh;
+        }
+
+        .gridito{
+          text-align: left;
+           padding: 10px; /* Espacio interno */
+            margin-bottom: 10px; /* Espacio entre elementos */
+            border-radius: 5px; /* Bordes redondeados opcional */
+            height: 30vh;
+            color: steelblue;
+           
+        }
+
+        .centoss {
+          background: black; /* Fondo negro */
+            color: rgba(0, 160, 0, 1.0); /* Color verde */
+            font-family: 'DejaVu Sans Mono', 'Liberation Mono', Courier, monospace; /* Fuente monoespaciada */
+           overflow: scroll;
+
+        }
+
+        .gridito li{
+            padding: 10px; /* Espacio interno de cada ítem */
+            list-style-position: inside; /* Mostrar la viñeta dentro del contenedor */
+
+            
+        }
+
+        .concarrusel{
+          overflow: scroll;
+          
+          
+        }
+        .carrusel2{display: inline-block;
+          white-space: nowrap;}
+        .carrusel2 .item{
+          display: inline-block;
+        }
+
+        .grid-item p{
+          font-size: 14px;
+        }
+
+
+
+         @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+            }
+        }
+
+        /* Media query para pantallas extra pequeñas */
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -53,20 +156,136 @@
 <div class="segundo" style="background: rgba(0, 0, 30, 1.0);color: beige;height: auto;">
 <center>
 
-    <div style="z-index: 12;position: relative;width: 80vw;padding: 20vh;">
-    <h1>Estrategia Digital</h1>
+    <div style="z-index: 12;position: relative;">
+
+
+      <div style="min-height: 100vh;">
+      <div style="width: 60vw;justify-content: center;padding: 10vh;">
+        <h1>Estrategia Digital</h1>
     <br>
-    <h2>Herramientas Esenciales para un Desarrollo Exitoso</h2>
-    <div class="gridtecnico">
-      <div class="tecnigrid">
+    <h4>Herramientas Esenciales para un Desarrollo Exitoso</h4>
+    <br>
+    <p style="line-height: 1.5;">La estrategia digital es un plan que utiliza herramientas y tecnologías específicas para lograr objetivos comerciales. Para un desarrollo exitoso, se requieren herramientas como Google Analytics, Git, Web Assembly, Docker y Postman (pruebas de API), a fin de optimizar procesos, mejorar la experiencia del cliente y adaptarse a un mercado dinámico.</p>
+      </div> 
+
+
+ <div class="grid-container">
+    <div class="grid-item">
+        <img src="https://via.placeholder.com/50" alt="Imagen 1">
+        <div>
+          <h4>Google Analytics</h4><br>
+        <p>Es una herramienta de análisis web que rastrea y reporta el tráfico y comportamiento de usuarios en sitios y aplicaciones. Se combina con Google Console y herramientas necesarias para los proyectos de promoción</p>  
+        </div>
         
+    </div>
+    <div class="grid-item">
+        <img src="https://via.placeholder.com/50" alt="Imagen 2">
+        <div>
+          <h4>Github</h4><br>
+          <p>Es el recurso donde se guarda en repositorios las versiones de lo avanzado en un proyecto. Junto con Github Pages se puede disponer de una plataforma probadamente fidedigna. Github Actions permite automatizar testeos con Docker y Selenium</p>
+        </div>
+        
+    </div>
+    <div class="grid-item">
+        <img src="https://via.placeholder.com/50" alt="Imagen 3">
+        <div>
+          <h4>WebAssembly</h4><br>
+        <p>WebAssembly (Wasm) es un formato de código binario que permite ejecutar aplicaciones a alta velocidad en navegadores web.</p>  
+        </div>
+
+    </div>
+    <div class="grid-item">
+        <img src="https://via.placeholder.com/50" alt="Imagen 4">
+        <div>
+          <h4>Postman - Talend</h4><br>
+        <p>Para probar APIs, tenemos Postman, aunque también está la opción de Talend. Facilitando el envío de solicitudes HTTP y la visualización de respuestas.</p>
+        </div>
+        
+    </div>
+    <div class="grid-item">
+        <img src="https://via.placeholder.com/50" alt="Imagen 5">
+        <div>
+          <h4>Docker</h4><br>
+                  <p>Docker es una plataforma de contenedorización que empaqueta aplicaciones y sus dependencias en contenedores portables y aislados.</p>
+
+        </div>
+    </div>
+    <div class="grid-item">
+        <img src="https://via.placeholder.com/50" alt="Imagen 6">
+        <div>
+          <h4>Web Workers - Service Workers</h4><br>
+                  <p>Entender elementos en el caché de navegador, local storage, coockies, mejora experiencia de usuario. Se puede hacer con un framework como React o Angular pero también de manera manual y tener un control más granular</p>
+
+        </div>
+    </div>
+</div>
+    
+<div style="height: 40px;"></div>
+
       </div>
-      <div class="tecnigrid">
-       <p>La estrategia digital es un plan que utiliza herramientas y tecnologías específicas para lograr objetivos comerciales. Para un desarrollo exitoso, se requieren herramientas como Google Analytics (análisis de datos), Git (control de versiones), Selenium (automatización de pruebas), Trello (gestión de proyectos) y Postman (pruebas de API).<br><br> Estas herramientas permiten optimizar procesos, mejorar la experiencia del cliente y adaptarse a un mercado dinámico, impulsando el crecimiento y la competitividad de las empresas.</p> 
-      </div>
-      <div class="tecnigrid">
-        <ul>
-    <h4>1. Introductorio o General:</h4>
+
+
+
+
+    <div style="height:auto; width: 100vw;background: rgba(255, 255, 255, 0.9);">
+     <div style="width: 60vw;justify-content: center;padding-top: 10vh;color: rgba(0, 0, 30, 1.0);">
+        <h1>Áreas de Trabajo</h1>
+    <br>
+    <h4>Soluciones Digitales Estratégicas para Impulsar Resultados</h4>
+    <br>
+    <p style="line-height: 1.5;">Ofrecemos servicios digitales adaptados a las necesidades de cada negocio, asegurando soluciones estratégicas y eficientes alineadas con sus objetivos. A través de la planificación estratégica y el uso de herramientas tecnológicas, optimizamos la presencia digital y maximizamos los resultados.</p>
+      </div> 
+
+
+
+
+      <div class="carrusel">
+    <div class="item">
+        <img src="https://via.placeholder.com/150" alt="Front">
+        <p>Front</p>
+    </div>
+    <div class="item">
+        <img src="https://via.placeholder.com/150" alt="APIs">
+        <p>APIs</p>
+    </div>
+    <div class="item">
+        <img src="https://via.placeholder.com/150" alt="Redes">
+        <p>Redes</p>
+    </div>
+    <div class="item">
+        <img src="https://via.placeholder.com/150" alt="Pipeline">
+        <p>Pipeline</p>
+    </div>
+    <div class="item">
+        <img src="https://via.placeholder.com/150" alt="Aplicaciones">
+        <p>Aplicaciones</p>
+    </div>
+    <div class="item">
+        <img src="https://via.placeholder.com/150" alt="Gestión de Proyectos">
+        <p>Gestión de Proyectos</p>
+    </div>
+</div>
+
+<div style="height: 40px;border-bottom: 3px solid black;width: 80vw;"></div>
+
+
+<div style="width: 60vw;justify-content: center;padding-top: 10vh;color: rgba(0, 0, 30, 1.0);">
+        <h1>Potenciando Proyectos con Herramientas Avanzadas</h1>
+    <br>
+    <h4>Experiencia y Recursos para Resultados Sobresalientes</h4>
+    <br>
+    <p style="line-height: 1.5;">Contamos con competencias en herramientas avanzadas y recursos específicos que aseguran la ejecución eficiente de proyectos, posicionándonos como un socio estratégico en la obtención de resultados sobresalientes</p>
+      </div> 
+    
+      <div class="grido">
+        
+        <div class="gridito">
+          <h1 style="font-size: 9vw;"><i class="fa fa-file-code" aria-hidden="true"></i></h1><br><h1>Tecnologías a Disposición</h1>
+          
+          </div>
+<div class="gridito centoss" style="font-size: 0.9vw;">
+          <h2>Tecnologías Fundamentales</h2>
+<ul>
     <li>MySQL: Ampliamente utilizado y fácil de aprender para bases de datos.</li>
     <li>PostgreSQL: Similar a MySQL, ofrece características avanzadas y es muy utilizado en entornos de aprendizaje.</li>
     <li>Git: Herramienta esencial para el control de versiones, con una amplia documentación y uso generalizado.</li>
@@ -76,49 +295,30 @@
     <li>GitHub Pages: Ideal para principiantes que quieren publicar páginas web simples.</li>
     <li>YAML: Lenguaje de marcado fácil de entender, utilizado en configuraciones.</li>
 </ul>
-      </div>
-      <div class="tecnigrid">
-        
-      </div>
-      <div class="tecnigrid">
-        
-      </div>
-      <div class="tecnigrid">
-        <ul><h4>2. Orientado a Frontend:
-</h4> 
-          <li>Aplicaciones web progresivas (PWA): Enfocadas en mejorar la experiencia del usuario en aplicaciones web.</li>
-          <li>AMP (Accelerated Mobile Pages): Optimización de páginas para cargas rápidas en móviles, relevante para el front-end.
-</li>
-          <li>Web Assembly: Herramienta que permite ejecutar código en el navegador, importante para desarrollo frontend avanzado.
-</li>
-          <li>Servicios web de RESTful: Comúnmente utilizados en el frontend para comunicarse con el backend.
-</li>
-          <li>Github Actions: Si bien es general, su uso puede orientarse hacia flujos de trabajo de desarrollo frontend.</li>
+<br><br>
 
-        </ul>
-        
-             </div>
-      <div class="tecnigrid">
-        <ul>
-    <h4>3. Bien Técnico:</h4>
+<h2>Frontend</h2>
+<ul>
+    <li>Aplicaciones web progresivas (PWA): Enfocadas en mejorar la experiencia del usuario en aplicaciones web.</li>
+    <li>AMP (Accelerated Mobile Pages): Optimización de páginas para cargas rápidas en móviles, relevante para el front-end.</li>
+    <li>Web Assembly: Herramienta que permite ejecutar código en el navegador, importante para desarrollo frontend avanzado.</li>
+    <li>Servicios web de RESTful: Comúnmente utilizados en el frontend para comunicarse con el backend.</li>
+    <li>GitHub Actions: Si bien es general, su uso puede orientarse hacia flujos de trabajo de desarrollo frontend.</li>
+</ul>
+<br><br>
+<h2>Bien Técnico</h2>
+<ul>
     <li>Kubernetes: Complejo y técnico, utilizado para la orquestación de contenedores.</li>
     <li>TensorFlow: Herramienta técnica para machine learning y deep learning.</li>
-    <li>Grafana y Prometheus.io: Herramientas de monitoreo y visualización de datos, muy técnicas.</li>
+    <li>Grafana y Prometheus: Herramientas de monitoreo y visualización de datos, muy técnicas.</li>
     <li>Ansible y Terraform: Herramientas de automatización y gestión de infraestructura que requieren conocimientos técnicos.</li>
-    <li>Multithreading, Hilo de ejecución: Conceptos técnicos de programación avanzados.</li>
+    <li>Multithreading y Hilo de ejecución: Conceptos técnicos de programación avanzados.</li>
     <li>Kali Linux: Orientado a pruebas de seguridad, técnico y específico.</li>
     <li>Nmap: Herramienta técnica para escaneo de redes y seguridad.</li>
 </ul>
-      </div>
-      <div class="tecnigrid">
-        
-      </div>
-            <div class="tecnigrid">
-        
-      </div>
-      <div class="tecnigrid">
-       <ul>
-    <h4>4. Complementario:</h4>
+<br><br>
+<h2>Complementarios</h2>
+<ul>
     <li>Selenium: Útil para pruebas automatizadas, complementa el desarrollo de aplicaciones.</li>
     <li>Talend: Herramienta de integración de datos que puede ser útil en varios contextos.</li>
     <li>C# y PHP: Lenguajes de programación que pueden ser utilizados en diferentes entornos.</li>
@@ -127,9 +327,75 @@
     <li>Windows Server y VMware: Herramientas de administración de servidores que son útiles en infraestructura.</li>
     <li>Computación en la nube: Concepto amplio que puede aplicarse en múltiples áreas de IT.</li>
 </ul>
+
+
+          </div>
+<div class="gridito">
+             <h1 style="font-size: 9vw;"><i class="fa fa-university" aria-hidden="true"></i>
+</h1><br><h1>Certificados y Reconocimientos</h1>
+
+          
+          </div>
+<div class="gridito concarrusel">
+           <div class="carrusel2">
+    <div class="item">
+        <img src="https://via.placeholder.com/150" alt="Front">
+        <p>Front</p>
+    </div>
+    <div class="item">
+        <img src="https://via.placeholder.com/150" alt="APIs">
+        <p>APIs</p>
+    </div>
+    <div class="item">
+        <img src="https://via.placeholder.com/150" alt="Redes">
+        <p>Redes</p>
+    </div>
+    <div class="item">
+        <img src="https://via.placeholder.com/150" alt="Pipeline">
+        <p>Pipeline</p>
+    </div>
+    <div class="item">
+        <img src="https://via.placeholder.com/150" alt="Aplicaciones">
+        <p>Aplicaciones</p>
+    </div>
+    <div class="item">
+        <img src="https://via.placeholder.com/150" alt="Gestión de Proyectos">
+        <p>Gestión de Proyectos</p>
+    </div>
+</div>
+          </div>
+<div class="gridito">
+   <h1 style="font-size: 9vw;"><i class="fa fa-cubes" aria-hidden="true"></i></h1><br><h1>Partners</h1>
+          </div>
+<div class="gridito">
+          <ul id="lista-opiniones" style="list-style-type: none; padding: 0; margin: 3vh;overflow: scroll; text-align: center;">
+
+        
+        <!-- Aquí se mostrarán las opiniones -->
+    </ul>
+          </div>
+
+        
       </div>
 
+
+
+
+
+
+
+
+
+<div style="height: 40px;"></div>
+
+  
+
+
     </div>
+  
+    
+
+      
    
     </div>
     
@@ -244,6 +510,57 @@
     <script src="script.js" defer></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
+
+
+
+fetch('./data.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Error al cargar el archivo JSON');
+    }
+    return response.json();
+  })
+  .then(data => {
+    const lista = document.getElementById('lista-opiniones');
+    
+    // Iterar sobre cada entrada del JSON y crear elementos HTML
+    data.forEach(item => {
+      const li = document.createElement('li');
+
+      // Crear la imagen
+      const img = document.createElement('img');
+      img.src = item.imagen;    // URL de la imagen desde el JSON
+      img.alt = `Imagen de ${item.nombre}`;
+      img.width = 100;          // Ajusta el ancho como prefieras
+      img.style.marginRight = '10px'; // Agregar espacio entre la imagen y el texto
+
+      // Crear el contenedor de texto del nombre y la opinión
+      const texto = document.createElement('span');
+      texto.textContent = `${item.nombre}: "${item.opinion}"`;
+      texto.style.marginLeft = 'auto';
+      
+      // Aplicar estilos flexbox a <li>
+      li.style.display = 'flex';
+      li.style.alignItems = 'center';   // Alinear verticalmente
+      
+      
+      li.style.borderRadius = '5px';    // Bordes redondeados opcionales
+      li.style.width = '100%';
+
+      // Agregar la imagen y el texto al <li>
+      li.appendChild(img);
+      li.appendChild(texto);
+
+      // Agregar el <li> a la lista
+      lista.appendChild(li);
+    });
+  })
+  .catch(error => {
+    console.error('Hubo un problema con la carga del JSON:', error);
+  });
+
+
+
   particlesJS('particles-container', {
     "particles": {
       "number": {
@@ -358,3 +675,4 @@
 
 </body>
 </html>
+<!-- Nos seguimos en Linkedin? ponemelo en el contacto y te agregamos! -->
