@@ -897,3 +897,27 @@ transition: 0.5s;
 			height: 25vw;
 			background: var(--bg);
 		}
+
+
+	.footeristaa{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 25vw;
+			background: var(--bg);
+		}
+		.footeristaa ul{
+			list-style-type: none;
+		}
+		.footeristaa ul li{
+			padding-top: 1%;
+		}
+
+		.normal li a{
+			text-decoration: none;
+			color: whitesmoke;
+		}
+		.normal li a:hover{
+			color: beige;
+		}
