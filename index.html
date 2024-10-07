@@ -416,8 +416,8 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 20vw;
 			height: 25vh;
+			width: 20vw;
 			transform-origin: center;
 			transform-style: preserve-3d;
 			
@@ -436,8 +436,8 @@
 			position: absolute;
 			top: 0;
 			left: 0;
+			height: auto;
 			width: 20vw;
-			height: 25vh;
 			transform-origin: center;
 			transform-style: preserve-3d;
 			background: black;
@@ -520,7 +520,6 @@ transition: 0.5s;
   transition: 0.3s;
   object-fit: cover;
   width: 100%;
-  height: 100%;
 }
 
 
@@ -933,6 +932,20 @@ transition: 0.5s;
 		.normal li a:hover{
 			color: beige;
 		}
+
+
+
+		@keyframes titilar {
+    0% {
+        opacity: 1; /* Visible */
+    }
+    50% {
+        opacity: 0; /* Invisible */
+    }
+    100% {
+        opacity: 1; /* Visible nuevamente */
+    }
+}
 	</style>
 	<meta charset="utf-8">
 	<title>Galeria</title>
@@ -968,7 +981,7 @@ transition: 0.5s;
 				</span>
 				<span class="elespan" style="--b:2;--c:5;" onclick="modall(this,this.getElementsByTagName('p')[0].innerHTML)">
 					<video class="myImg" src="res/movie.mp4" autoplay muted loop></video>
-					<p class="textito">Por el esfuerzo de cada día. Por decir sí al futuro, dedicarse hoy, pensando en el mañana. Por intentar superarse día a día. Por ser siempre un poco más profesionales</p>
+					<p class="textito">Por el esfuerzo de cada día. Por decir sí al futuro, dedicarse hoy, pensando en el mañana. Por intentar superarse día a día. Por ser siempre un poco más profesionales. <br>Hay que tener fe en el camino hecho. Vendrán los frutos y lo mejor está por llegar</p>
 					<p class="textsidisp"> </p>
 				</span>
 				<span class="elespen" style="--b:3;--c:12;">
@@ -976,7 +989,9 @@ transition: 0.5s;
 				</span>
 				<span class="elespan" style="--b:3;--c:12;" onclick="modall(this,this.getElementsByTagName('p')[0].innerHTML)">
 					<img class="myImg" src="res/foto6.jpg">
-					<p class="textito">Nuestra práctica es un pipeline de integración y despliegue continuo, con un ciclo constante de pruebas y mejoras. En cada etapa, evaluamos los resultados y hacemos ajustes para optimizar cada estrategia. Este proceso permanente nos permite corregir y perfeccionar de manera continua, manteniendo un enfoque sólido y adaptable, siempre alineado con los objetivos y demandas del mercado.</p>
+					<p class="textito">Nosotros proporcionamos servicios utilizando tecnologías avanzadas para gestionar de manera efectiva unidades de negocio en diversos sectores. Además de la dimensión tecnológica, contamos con una unidad comercial estratégica que identifica oportunidades y establece objetivos basados en un análisis profundo del entorno y del mercado.
+
+</p>
 					<p class="textsidisp"> </p>
 				</span>
 				<span class="elespen" style="--b:4;--c:22;">
@@ -984,7 +999,7 @@ transition: 0.5s;
 				</span>
 				<span class="elespan" style="--b:4;--c:22;" onclick="modall(this,this.getElementsByTagName('p')[0].innerHTML)">
 					<img class="myImg" src="res/foto7.jpg">
-					<p class="textito">Participamos en eventos que fomentan el networking y el fortalecimiento de relaciones, además de actividades de teambuilding. Estas experiencias no solo enriquecen nuestra conexión con socios y clientes, sino que también crean un ambiente propicio para la colaboración y la innovación</p>
+					<p class="textito">Participamos activamente en eventos tanto comerciales como de interés para los sectores en los que estamos desarrollando proyectos. Nos enfocamos en establecer relaciones sólidas y en mostrar lo que realmente importa. Proponemos, proyectamos y conseguimos resultados efectivos.</p>
 					<p class="textsidisp"> </p>
 				</span>
 				<span class="elespen" style="--b:5;--c:26;">
@@ -992,14 +1007,20 @@ transition: 0.5s;
 				</span>
 				<span class="elespan" style="--b:5;--c:26;" onclick="modall(this,this.getElementsByTagName('p')[0].innerHTML)">
 					<img class="myImg" src="res/foto8.jpg">
-					<p class="textito">Nos involucramos activamente en ferias clave para sectores donde operamos. Eventos como Expo Contrucción, Expoagro, cumbres tecnológicas, summits con partners estratégicos, participación en eventos privados y públicos, nos permiten potenciar nuestra visibilidad y fortalecer conexiones en el mercado, permitiéndonos alcanzar objetivos estratégicos</p>
-					<p class="textsidisp"> </p>
+					<p class="textito">Es fundamental participar en eventos, exposiciones y ferias para mantenerse actualizado en la coyuntura actual. Estas actividades son elementos vitales para llevar a cabo un trabajo que genere resultados significativos.</p>
+					<p class="textsidisp"></p>
 				</span>
 				
 				
 				
 				
 			</div>
+			<div style="z-index: 4;color: wheat;bottom: 10vh;position: absolute;justify-content: center;font-weight: 100;letter-spacing: 12px;text-align: center; animation: titilar 4s infinite;cursor: pointer;" id="scrollBtn">
+				<h4 style="font-size: 18px;">Descubra Más</h4>
+						<h1><i class="fa fa-angle-double-down" aria-hidden="true"></i></h1>
+
+			</div>
+						
 		
 		</div>
 	
@@ -1416,10 +1437,7 @@ fetch('./data.json')
       const img = document.createElement('img');
       img.src = item.imagen;    // URL de la imagen desde el JSON
       img.alt = `Imagen de ${item.nombre}`;
-      img.style.width = '10vw';
-      img.style.height = '10vw';
-      img.style.objectFit = 'cover';
-      img.style.borderRadius = '15px';
+      img.width = 100;          // Ajusta el ancho como prefieras
       img.style.marginRight = '10px'; // Agregar espacio entre la imagen y el texto
 
       // Crear el contenedor de texto del nombre y la opinión
@@ -1469,6 +1487,16 @@ Email.send({
 );
 }
 
+
+document.getElementById("scrollBtn").addEventListener("click", function() {
+    // Desplazarse 100vh hacia abajo
+    window.scrollBy({
+        top: window.innerHeight, // Mueve 100vh hacia abajo
+        behavior: "smooth" // Desplazamiento suave
+    });
+});
+
 </script>
 </body>
 </html>
+<!-- Nos seguimos en Linkedin? ponemelo en el contacto y te agregamos! -->
