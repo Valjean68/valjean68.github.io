@@ -1,57 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script>
-		
-fetch('./data.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Error al cargar el archivo JSON');
-    }
-    return response.json();
-  })
-  .then(data => {
-    const lista = document.getElementById('lista-opiniones');
-    
-    // Iterar sobre cada entrada del JSON y crear elementos HTML
-    data.forEach(item => {
-      const li = document.createElement('li');
-
-      // Crear la imagen
-      const img = document.createElement('img');
-      img.src = item.imagen;    // URL de la imagen desde el JSON
-      img.alt = `Imagen de ${item.nombre}`;
-      img.width = 100;          // Ajusta el ancho como prefieras
-      img.style.marginRight = '10px'; // Agregar espacio entre la imagen y el texto
-
-      // Crear el contenedor de texto del nombre y la opinión
-      const texto = document.createElement('span');
-      texto.textContent = `${item.nombre}: "${item.opinion}"`;
-      texto.style.marginLeft = 'auto';
-      
-      // Aplicar estilos flexbox a <li>
-      li.style.display = 'flex';
-      li.style.alignItems = 'center';   // Alinear verticalmente
-      li.style.margin = '3vw';
-      
-      
-      li.style.borderRadius = '5px';    // Bordes redondeados opcionales
-      li.style.width = '100%';
-
-      // Agregar la imagen y el texto al <li>
-      li.appendChild(img);
-      li.appendChild(texto);
-
-      // Agregar el <li> a la lista
-      lista.appendChild(li);
-    });
-  })
-  .catch(error => {
-    console.error('Hubo un problema con la carga del JSON:', error);
-  });
-
-
-	</script>
+	
 
 	<style type="text/css">
 body * {
@@ -1004,6 +954,61 @@ transition: 0.5s;
     }
 }
 	</style>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+            // Una vez que la página esté lista, muestra el resto del contenido
+            document.body.style.visibility = 'visible';
+        });
+fetch('./data.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Error al cargar el archivo JSON');
+    }
+    return response.json();
+  })
+  .then(data => {
+    const lista = document.getElementById('lista-opiniones');
+    
+    // Iterar sobre cada entrada del JSON y crear elementos HTML
+    data.forEach(item => {
+      const li = document.createElement('li');
+
+      // Crear la imagen
+      const img = document.createElement('img');
+      img.src = item.imagen;    // URL de la imagen desde el JSON
+      img.alt = `Imagen de ${item.nombre}`;
+      img.width = 100;          // Ajusta el ancho como prefieras
+      img.style.marginRight = '10px'; // Agregar espacio entre la imagen y el texto
+
+      // Crear el contenedor de texto del nombre y la opinión
+      const texto = document.createElement('span');
+      texto.textContent = `${item.nombre}: "${item.opinion}"`;
+      texto.style.marginLeft = 'auto';
+      
+      // Aplicar estilos flexbox a <li>
+      li.style.display = 'flex';
+      li.style.alignItems = 'center';   // Alinear verticalmente
+      li.style.margin = '3vw';
+      
+      
+      li.style.borderRadius = '5px';    // Bordes redondeados opcionales
+      li.style.width = '100%';
+
+      // Agregar la imagen y el texto al <li>
+      li.appendChild(img);
+      li.appendChild(texto);
+
+      // Agregar el <li> a la lista
+      lista.appendChild(li);
+    });
+  })
+  .catch(error => {
+    console.error('Hubo un problema con la carga del JSON:', error);
+  });
+
+
+	</script>
 	<meta charset="utf-8">
 	<title>Vinceremo Insieme | Software, Tecnologías y Crecimiento Estratégico</title>
     <link rel="icon" href="ruta/del/favicon.png" type="image/png"> 
@@ -1348,10 +1353,7 @@ transition: 0.5s;
 </script>
 <script type="text/javascript">
 	
-document.addEventListener('DOMContentLoaded', function() {
-            // Una vez que la página esté lista, muestra el resto del contenido
-            document.body.style.visibility = 'visible';
-        });
+
 
 let body=document.querySelector('body')
 let boxi=document.querySelector('.boxi')
