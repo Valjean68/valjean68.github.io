@@ -4,12 +4,7 @@
 	
 
 	<style type="text/css">
-body * {
-            visibility: hidden; /* Oculta todo */
-        }
-        #primer-div {
-            visibility: visible; /* Haz visible solo el div específico */
-        }
+
 	:root{
 		--thetaarriba: 0deg;
 		--thetacero: 0deg;
@@ -956,10 +951,7 @@ transition: 0.5s;
 	</style>
 
 	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-            // Una vez que la página esté lista, muestra el resto del contenido
-            document.body.style.visibility = 'visible';
-        });
+		
 fetch('./data.json')
   .then(response => {
     if (!response.ok) {
