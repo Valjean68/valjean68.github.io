@@ -46,15 +46,18 @@
 
          .carrusel .item {
             flex: 0 0 auto; /* Evita que los elementos se encojan */
-            width: 20vw; /* Ajusta el ancho según sea necesario */
+            height: 25vh;
             border: 1px solid black;
             border-radius: 8px;
             text-align: center;
             padding: 10px;
+            margin: 5px;
+            cursor: pointer;
         }
 
         .carrusel .item img {
-            width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+            height: 100%;
+            object-fit: cover;
             border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
         }
 
@@ -170,6 +173,9 @@
       </div> 
 
 
+
+
+
  <div class="grid-container">
     <div class="grid-item">
         <h1><i class="fa-brands fa-sellsy"></i></h1>
@@ -241,28 +247,39 @@
 
 
       <div class="carrusel">
-    <div class="item">
+    <div class="item"  onclick="modall(this,this.getElementsByTagName('p')[0].innerHTML)">
         <img src="res/area1.jpg" alt="Front">
+        <p style="display: none;">Trabajar en frontend con Flask permite crear interfaces dinámicas que usan JSON para comunicarse con el backend. Con Web Workers, se gestionan tareas en segundo plano, mientras que el control del tráfico se realiza directamente a través de scripts para optimizar el rendimiento.</p>
         <p>Front</p>
     </div>
-    <div class="item">
+    <div class="item"  onclick="modall(this,this.getElementsByTagName('p')[0].innerHTML)">
         <img src="res/area2.jpg" alt="APIs">
+        <p style="display: none;">
+        El manejo de APIs se enfoca en crear y gestionar interfaces para la comunicación entre sistemas. Herramientas como Swagger y Postman ayudan en la documentación y validación, mientras que Talend optimiza la integración de flujos de datos.</p>
         <p>APIs</p>
     </div>
-    <div class="item">
+    <div class="item"  onclick="modall(this,this.getElementsByTagName('p')[0].innerHTML)">
         <img src="res/area3.jpg" alt="Redes">
+        <p style="display: none;">
+        El manejo de redes implica gestionar servidores Linux y Windows con Active Directory (AD) para controlar accesos y optimizar el rendimiento mediante configuraciones adecuadas de seguridad y segmentación.</p>
         <p>Redes</p>
     </div>
-    <div class="item">
+    <div class="item" onclick="modall(this,this.getElementsByTagName('p')[0].innerHTML)">
         <img src="res/area4.jpg" alt="Pipeline">
+        <p style="display: none;">
+        Un pipeline de despliegue de software automatiza el proceso de llevar el código a producción. Usando herramientas como Jenkins o GitHub Actions, integra y prueba el código, facilitando un despliegue rápido y eficiente.</p>   
         <p>Pipeline</p>
     </div>
-    <div class="item">
+    <div class="item" onclick="modall(this,this.getElementsByTagName('p')[0].innerHTML)">
         <img src="res/area5.jpg" alt="Aplicaciones">
+        <p style="display: none;">
+        El desarrollo de software permite crear herramientas útiles que optimizan procesos y automatizan tareas, mejorando la eficiencia y la competitividad empresarial.</p>
         <p>Aplicaciones</p>
     </div>
-    <div class="item">
+    <div class="item" onclick="modall(this,this.getElementsByTagName('p')[0].innerHTML)">
         <img src="res/area6.jpg" alt="Gestión de Proyectos">
+        <p style="display: none;">
+        La gestión de proyectos asegura el cumplimiento de objetivos a tiempo, mediante un seguimiento constante y la superación de obstáculos. La resolución de problemas y la comunicación efectiva son esenciales para mantener el flujo de trabajo y alcanzar el éxito.</p>
         <p>Gestión de Proyectos</p>
     </div>
 </div>
@@ -511,6 +528,40 @@
     <script src="script.js" defer></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
+
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementsByClassName("elespan");
+
+var modalImg = document.getElementById("img01");
+var modalVid = document.getElementById("img02");
+var captionText = document.getElementById("caption");
+
+
+
+  function modall(elemento,texto){
+
+    modal.style.display = "block";
+
+    switch(Boolean(elemento.getElementsByTagName('video')[0])){
+      case true:
+      modalVid.style.display='block'
+       modalVid.src = elemento.getElementsByTagName('video')[0].src;
+       modalImg.style.display='none';
+       break;
+       case false:
+        modalImg.style.display='block'
+       modalImg.src = elemento.getElementsByTagName('img')[0].src;
+       modalVid.style.display='none';
+       break;
+       }
+    captionText.innerHTML=texto
+    }
+
 
 
 
