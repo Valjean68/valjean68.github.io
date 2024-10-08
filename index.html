@@ -2,11 +2,7 @@
 <html>
 <head>
 	<script>
-		  window.addEventListener('DOMContentLoaded', (event) => {
-            // Mostrar el segundo div después de que el primer div se haya cargado
-            document.getElementsByClassName('uyuyuy').style.display = 'block';
-        });
-
+		
 fetch('./data.json')
   .then(response => {
     if (!response.ok) {
@@ -1346,7 +1342,11 @@ transition: 0.5s;
 </script>
 <script type="text/javascript">
 	
-       
+         window.addEventListener('DOMContentLoaded', (event) => {
+            // Mostrar el segundo div después de que el primer div se haya cargado
+            document.getElementsByClassName('uyuyuy').style.display = 'block';
+        });
+
 
 let body=document.querySelector('body')
 let boxi=document.querySelector('.boxi')
