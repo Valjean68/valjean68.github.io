@@ -588,9 +588,9 @@ fetch('./data.json')
 
       // Crear el contenedor de texto del nombre y la opinión
       const texto = document.createElement('span');
-      texto.textContent = `<h2><a href="${item.nombre}">${item.nombre}</a></h2><br><br> <p style="font-size: 12px;">${item.opinion}</p>`;
+      texto.innerHTML = `<h2><a href="${item.nombre}">${item.nombre}</a></h2><br><br> <p style="font-size: 12px;">${item.opinion}</p>`;
       texto.style.marginLeft = 'auto';
-      
+        
       // Aplicar estilos flexbox a <li>
       li.style.display = 'flex';
       li.style.alignItems = 'center';   // Alinear verticalmente
